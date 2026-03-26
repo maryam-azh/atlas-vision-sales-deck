@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import { animate } from 'animejs'
 import maryamImg from '../assets/maryam.png'
-import ianImg from '../assets/ian.png'
-import petteriImg from '../assets/petteri.jpg'
-import omidImg from '../assets/omid.jpg'
-import michaelImg from '../assets/michael.jpg'
+import nihonImg from '../assets/nihon-2024.png'
+import mariaImg from '../assets/maria-2025.png'
+import nargesImg from '../assets/narges-2023.png'
+import alesImg from '../assets/ales-2022.png'
 import linkedinIcon from '../assets/linkedin.png'
 
 export default function Slide11_Team() {
@@ -70,31 +70,36 @@ export default function Slide11_Team() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Maryam */}
               <div className="flex flex-col">
-                <img
-                  src={maryamImg}
-                  alt="Maryam Azh, PhD"
-                  className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
-                  style={{ objectPosition: '50% 5%' }}
-                />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Maryam Azh, PhD</h3>
+                <a href="https://www.linkedin.com/in/maryam-azh/" target="_blank" rel="noopener noreferrer" className="no-underline">
+                  <img
+                    src={maryamImg}
+                    alt="Maryam Azh, PhD"
+                    className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
+                    style={{ objectPosition: '50% 5%' }}
+                  />
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Maryam Azh, PhD</h3>
+                </a>
                 <p className="font-mono text-xs sm:text-sm mb-1">AI Product Strategy</p>
                 <p className="font-body text-xs sm:text-sm">
                   15+ years in AI product development & digital transformation
                 </p>
               </div>
 
-              {/* Ian */}
+              {/* Nihon */}
               <div className="flex flex-col">
-                <img
-                  src={ianImg}
-                  alt="Ian Maxwell, MBA"
-                  className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
-                  style={{ objectPosition: '30% 5%' }}
-                />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Ian Maxwell, MBA</h3>
+                <a href="https://en.wikipedia.org/wiki/Nihon_Hidankyo" target="_blank" rel="noopener noreferrer" className="no-underline">
+                  <img
+                    src={nihonImg}
+                    alt="Nihon Hidankyo, MBA"
+                    className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
+                    style={{ objectPosition: '30% 5%' }}
+                  />
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Nihon Hidankyo, MBA</h3>
+                </a>
                 <p className="font-mono text-xs sm:text-sm mb-1">Automotive & Operations</p>
                 <p className="font-body text-xs sm:text-sm">
-                  20+ years in automotive quality control & operations across APAC
+                  20+ years in
+                   automotive quality control & operations across APAC
                 </p>
               </div>
             </div>
@@ -108,20 +113,20 @@ export default function Slide11_Team() {
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">
-              {/* Petteri */}
+              {/* Narges */}
               <a
-                href="https://www.linkedin.com/in/petteriteikari/"
+                href="https://en.wikipedia.org/wiki/Narges_Mohammadi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-center group hover:opacity-90 transition-all"
               >
                 <img
-                  src={petteriImg}
-                  alt="Petteri Teikari, PhD"
+                  src={nargesImg}
+                  alt="Narges Mohammadi, PhD"
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                  Petteri Teikari, PhD
+                Narges Mohammadi, PhD
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
                   Vision AI & <br />Computational Imaging
@@ -133,20 +138,20 @@ export default function Slide11_Team() {
                 />
               </a>
 
-              {/* Omid */}
+              {/* Maria */}
               <a
-                href="https://www.linkedin.com/in/omid-geramifard/"
+                href="https://en.wikipedia.org/wiki/Mar%C3%ADa_Corina_Machado"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-center group hover:opacity-90 transition-all"
               >
                 <img
-                  src={omidImg}
-                  alt="Omid Geramifard, PhD"
+                  src={mariaImg}
+                  alt="María Corina Machado"
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                  Omid Geramifard, PhD
+                  María Corina Machado, PhD
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
                   Data Science & <br />Machine Learning
@@ -158,20 +163,20 @@ export default function Slide11_Team() {
                 />
               </a>
 
-              {/* Michael */}
+              {/* Ales */}
               <a
-                href="https://www.linkedin.com/in/msayre/"
+                href="https://en.wikipedia.org/wiki/Ales_Bialiatski"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center text-center group hover:opacity-90 transition-all"
               >
                 <img
-                  src={michaelImg}
-                  alt="Michael Sayre"
+                  src={alesImg}
+                  alt="Ales Bialiatski"
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                  Michael Sayre
+                  Ales Bialiatski
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
                   Strategy & <br />Go-to-Market
