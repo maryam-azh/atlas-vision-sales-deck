@@ -1,0 +1,600 @@
+Artificial Intelligence for Automotive pre-delivery inspection
+INSERT DATE
+FIX NUMBERING
+
+Building the AI-Native Inspection Infrastructure for Automotive 
+Mission: we build intelligent software and sensing systems that automate vehicle inspections delivering accurate, trusted results with minimal need for manual walkthroughs.
+Atlas Vision – AI for Automotive Inspection
+
+Manual inspections are inconsistent, costly, and slow.
+Use 3 strong pain points with one visual (assembly line photo or animated inspection diagram).
+The problem
+3
+
+1. OEM Pre-Delivery Inspection (PDI)
+Global new car sales ~90M/y (OICA 2024). Assume ~60% get standardized PDI at central hubs → ~54M inspections.
+Value per inspection: ~$80 (covers automation hardware amortization + software/data subscription vs. ~$200–300 manual cost today).
+Market value:54M × $80 = $4.3B
+
+2. Dealership Inbound Quality & Certification
+New car deliveries to dealerships: ~60M/y (not all markets do full dealership-level PDI; assume 50% adoption → 30M).
+CPO + warranty inspections: ~20M/y.
+Total ~50M inspections.
+Value per inspection: ~$40 (dealer margins are tighter, but automation still saves labor + upsells services).
+Market value:50M × $40 = $2.0B
+
+3. Fleet & Logistics Handover (Rental, Leasing, Mobility Platforms)
+Global fleet cars ~60M. Assume ~2 inspections per car per year (handover, return).
+= 120M inspections annually.
+Value per inspection: ~$15 (fleets need high-volume, lower per-unit cost).
+Market value:120M × $15 = $1.8B
+$8B+ TAM across OEM, Dealer, Fleet, and Insurance segments.
+Why: problem and market
+Market Opportunity
+
+Context: Automakers run PDI at factories and ports before vehicles are shipped to dealerships. Today this is labor-intensive and inconsistently documented. Agentic AI + robotics provides standardization, speed, and digital traceability (ties into "digital vehicle passport").
+Context: Dealers inspect incoming cars before handover. They also use inspections for certified pre-owned (CPO) programs, trade-ins, and warranty claims. Standardizing this reduces disputes and improves CSI (customer satisfaction index).
+3. Context: Fleets (rental, leasing, ride-sharing) need high-frequency inspections at check-in/check-out. Agentic AI + robotics cuts disputes, reduces damage costs, and supports insurance integration.
+
+4
+
+Introducing Atlas Vision: Efficiency, consistency, and documentation for improved delivery time, warranty costs, and CSI (Customer Satisfaction Index).
+2. Increase inspection accuracy & consistency
+
+
+
+Fewer delivery rejections, lower rework cost, and reduced warranty exposure.
+3. Digitize defect tracking & accountability
+
+
+
+Traceable quality record for OEM, dealer, and insurer collaboration.
+4. Enable data-driven supplier feedback
+
+Drives continuous improvement and supplier scorecarding.
+What: Introducing Atlas Vision & value prop
+1. Reduce inspection time & labor
+
+
+
+Up to 70 % reduction in inspection time per vehicle.
+5. Support ESG & sustainability reporting
+
+Quantifiable CO₂ and waste reduction metrics for sustainability reporting.
+5
+
+One Agentic Platform for AI-Driven Vehicle Inspection and Quality Intelligence.
+What: product Concept
+✅ Faster ✅ Consistent ✅ Explainable ✅ Connected
+Workflow diagram
+A five-stage circular or horizontal workflow, each stage linked to one or more Atlas Vision modules.Underneath, show color-coded tracks for Edge, Cloud, and Enterprise Integration.
+
+Stage
+Action
+Powered By
+Output / Value
+1. Capture
+Vehicles are scanned automatically using mobile devices, fixed rigs, or drones.
+Atlas Vision Lite, VPC Suite, Aero Vision
+High-resolution RGB / LiDAR / thermal feeds tagged by VIN
+2. Detect
+Multimodal AI identifies scratches, dents, misalignments, and missing parts in real time.
+YOLO 11 · Grounding DINO · SAM-2
+Bounding boxes / masks with confidence scores
+3. Reason
+Visual-Language Models classify severity, infer root cause, and recommend corrective action.
+Qwen 2.5-VL Edge / 7B Cloud, Claim Vision API
+JSON output – defect type, severity, suggested fix
+4. Verify & Learn
+Technicians validate results; feedback continuously improves AI accuracy.
+Governance & Analytics Module · Data & Feedback Pipeline
+RLHF loop → higher precision over time + audit logs
+5. Report & Integrate
+Results sync automatically to OEM ERP / VPC systems, DMS, or insurance claims APIs.
+Digital Vehicle Passport API · ERP/VPC Connector
+Instant PDI reports, defect dashboards, compliance records
+Exclude detail from these two columns
+6
+
+How: product release/business Roadmap
+Q1–Q2 2026: MVP live → Used/Rental market traction
+Q3 2026: Insurance pilots + VPC Fast-Lane kick-off
+Q4 2026: Insurance ARR ≈ S$ 500 k VPC ROI validated
+Q1–Q2 2027: Atlas Vision Pro Suite GA OEM contracts signed
+Q3–Q4 2027: Drone inspection pilot Series A+ scale-up
+Module
+Function
+Roadmap phase
+Atlas Vision Lite
+Edge app for car-rental & used-car inspection
+Phase 1 (Q1–Q2 2026)
+Atlas Claim Vision API
+Damage scoring for insurers & repair networks
+Phase 2 (Q3–Q4 2026)
+Atlas VPC Suite (Fast-Lane)
+AI-driven inspection automation for Vehicle Processing Centers (OEM yards)
+Parallel: Q3 2026 → Q2 2027
+Atlas Vision Pro Suite
+Full-vehicle PDI automation for OEMs and dealerships
+Phase 3 (Q1–Q2 2027)
+Atlas Aero Vision
+Drone-based outdoor inspection (Phase 4)
+Phase 4 (Q3–Q4 2027)
+Atlas Governance & Analytics Module
+Compliance, explainability, and continuous performance monitoring
+Across Phases 2 → 4
+Atlas Calibration & Lighting Kit
+Hardware + software calibration for consistent imaging in variable lighting
+Introduced Phase 1 → Scaled Phase 3
+Atlas Data & Feedback Pipeline
+Continuous model improvement & dataset management
+Underlying All Phases
+
+From AI-Native Inspection to Agentic Automation: Measurable Business Impact.”
+What: business impact
+Use a vertical or circular infographic with four icons (Speed • Accuracy • Efficiency • Scale) feeding into one central figure: “AI-Driven Quality Intelligence”.
+Content Blocks:
+📈 Performance Impact
+Inspection time reduced from 25 min → under 3 min
+Defect detection accuracy improved to ≥ 97 %
+Inspection cost per vehicle reduced by ~50 %
+💰 Financial Growth
+Active clients: 10 + (OEMs, insurers, fleets)
+Cumulative ARR ≈ US $ 3–3.5 M
+2–3 OEM / VPC sites fully operational
+🧠 Data & Governance
+150 k annotated images powering adaptive models
+ISO 42001 / NIST RMF governance built-in
+Digital Vehicle Passport ecosystem operational
+
+Atlas Vision standardizes quality across the automotive supply chain — every vehicle becomes a verified data point
+
+Foundation & Market Expansion (Q1–Q4 2026)
+How: business impact
+Visual Layout:Two-column timeline with Phase 1 (left) → Phase 2 (right).Add an overlaid “VPC Fast-Lane Pilot” ribbon starting mid-Phase 2.
+
+Right Column — Phase 2 (Market Expansion)
+Market Focus: Insurance & repair networks (+ OEM interest)
+Goal: Automate claim verification & create enterprise footprint
+Execution Highlights:
+Launch Claim Vision API + RLHF feedback loop
+Integrate 2 insurers for claim scoring
+Begin ISO 42001 logging + VPC pilot setup
+Revenue Model: API usage + enterprise license ($0.5–1 per image / $20–30 per claim)
+Outcomes:
+90 % alignment with human assessors
+ARR ≈ US $ 500 k
+OEM VPC pilot signed and ROI baseline captured
+
+Left Column — Phase 1 (MVP / Foundation)
+Market Focus: Used-car dealers & rental fleets
+Goal: Validate edge AI inspection performance
+Execution Highlights:
+Launch Atlas Vision Lite (iOS edge app)
+Build > 10 k defect dataset
+Deploy 3 fleet pilots + calibration kits
+Revenue Model: Subscription / per-scan ($2–3)
+Outcomes:
+≥ 80 % recall on major defects
+≤ 5 min per scan
+ARR ≈ US $ 150 k
+Deploy Drive-Through Kit and VIN-linked Digital Passport; 40 % faster inspection validated in OEM yard.
+Goal: Establish credibility and early traction.
+Ribbon — VPC Fast-Lane (Q3 2026 → Q2 2027)
+
+Enterprise Scale & Autonomous Growth (Q1–Q4 2027)
+How: business impact
+Visual Layout:Stacked roadmap: Phase 3 (top half) → Phase 4 (bottom half).Include icons for “OEM ERP Integration” and “Autonomous Drone Fleet”.
+Right Column — Phase 4 (Autonomous & Scaling)
+Market Focus: Fleet logistics & outdoor OEM yards
+Goal: Achieve full automation and federated scalability
+Execution Highlights:
+Launch Atlas Aero Vision (drone inspection module)
+Multi-agent autonomy: drone + ground + cloud coordination
+Federated learning for OEM-specific model fine-tuning
+Revenue Model: Hardware lease + SaaS bundle
+Per-drone subscription + analytics license
+Outcomes:
+≥ 97 % accuracy outdoors
+ARR ≥ US $ 3 M
+Multi-OEM deployments across APAC + Series A+ trigger
+
+Left Column — Phase 3 (OEM / PDI Launch)
+Market Focus: OEM & dealership networks (+ VPC sites)
+Goal: Commercialize full SaaS suite and OEM integrations
+Execution Highlights:
+Launch Atlas Vision Pro Suite + predictive analytics
+Integrate Digital Vehicle Passport into ERP (QMS systems)
+Deploy ISO 42001-compliant governance module
+Revenue Model: Enterprise SaaS subscription + per-vehicle license ($100–150 per vehicle)
+Outcomes:
+95 % accuracy
+≤ 3 min inspections
+ARR ≈ US $ 1.5 M
+First OEM contract live
+
+Atlas Vision evolves from inspection tool to autonomous quality infrastructure — an AI-native foundation for OEM digital transformation.”
+Goal: Show scalability and enterprise monetization.
+
+How much
+We’re seeking $750–800 k USD in seed capital to deliver Phases 1 & 2 (12 months): launch an edge-based MVP for used-car/rental fleets, close two insurance pilots, and prepare our Series A OEM platform launch.
+Phase
+Duration
+Primary Milestones
+Funding Allocation (USD)
+Phase 1 (MVP / Foundation)
+0–6 months
+• Edge app MVP • Dealer/rental pilots • Dataset 10 K images • Early ARR traction
+≈ $350 k
+Phase 2 (Market Expansion)
+6–12 months
+• Claim Vision API • LoRA-tuned VLM • Insurance pilots • 100 K image corpus • SaaS backend
+≈ $400–450 k
+Use of Funds
+Purpose
+%
+Engineering & AI R&D
+Core team (ML + iOS), GPU compute, model tuning
+40 %
+Data & Annotation
+Defect dataset creation, labeling, RLHF feedback infra
+15 %
+Pilot Deployments
+Hardware rigs, field ops, travel, calibration
+10 %
+Product & UX Dev
+Dashboard, API, testing, UI design
+12 %
+Biz Dev & Marketing
+Partner pilots, legal, outreach
+8 %
+Governance & Compliance
+ISO 42001 setup, audit logging
+5 %
+Ops & Contingency
+Cloud, admin, subscriptions
+5 %
+
+Meet the visionaries
+2
+Founders 
+Maryam Azh, PhD
+AI Product Strategy (SG)
+Omid Geramifard, PhD
+Data Science (SG)
+Ian Maxwell, MBA
+Automotive expert (SG)
+Michael Sayre
+Robotics expert and serial entrepreneur (SG)
+Team
+Who
+Petteri Teikari
+Vision expert
+placeholder
+
+THANK YOU
+For more intelligence like tech, business verticals, competitors and business model around the topics in this deck please reach out to the Founders, have a great day!
+
+Atlas Vision — Business Roadmap
+Time Horizon: 0–12 months
+Phase 1 — Foundation (0–6 months)
+Market focus: Used-Vehicle & Car-Rental FleetsTech readiness level: TRL 5–6 (edge-based camera detection, limited lighting robustness)
+Customer Pain Point
+Manual inspection before resale or rental return is inconsistent, slow (~30 min per car), and dependent on staff expertise.
+Insurers spend days on manual claim verification and photo audits; fraud risk high.
+Atlas Vision Value Prop
+Rapid visual scanning (3–5 min) with mobile device; instant report on dents, scratches, missing parts; integrated with rental CRM or resale apps.
+Automated photo/video damage assessment at claim submission; consistent severity scoring with visual-language reasoning.
+Product Offering
+iOS app (Atlas Vision Lite) + dashboard for report storage and export (PDF/API).
+“Atlas Claim Vision API” — white-label API + dashboard for claim assessors.
+Revenue Model
+Subscription (per yard/month) or pay-per-inspection (~S$ 2 / scan).
+API usage-based (per claim) + enterprise licensing for insurers and repair networks.
+Tech Constraints
+Works best outdoors or well-lit indoors; no drone/autonomous mode yet; relies on YOLO + VLM pipeline.
+Lighting variance, smartphone camera quality differences; need robust VLM grounding for unseen defect types.
+Execution Goals
+• Pilot 2–3 rental fleets / used-car dealers in SG & MY.• Build labeled dataset > 10 k defects.• Target 80 % recall on major surface defects.• Deliver 5 min average inspection time.
+• LoRA-tune Qwen 2.5-VL 3B on insurance image corpus.• Achieve 90 % alignment with human assessors on severity classification.• Integrate with 2 insurers for pilot workflow.• Begin governance logging (ISO 42001 prep).
+Expected Outcomes
+Early recurring revenue (~S$ 150 k ARR) + product-market validation in operational setting.
+Validation in regulated domain; ARR ~ S$ 500 k; dataset scale-up to 100 k images.
+Phase 2 — Market Expansion (6–12 months)
+Market focus: Insurance & Claims ProcessingTech readiness level: TRL 6–7 (multi-camera, VLM reasoning, basic lighting control)
+How: Roadmap details: 0-12 backup slide only
+OUTDATED
+
+Atlas Vision — Business Roadmap
+Time Horizon: 12–24 months
+Customer Pain Point
+Manual PDIs miss subtle paint defects or misalignments; inconsistent dealer reporting.
+Large outdoor storage yards are costly to inspect manually; inconsistent photo documentation.
+Atlas Vision Value Prop
+OEM-grade automated inspection with digital vehicle passport and defect trend analytics; integration into ERP/PDI systems.
+Drone-based autonomous scanning with multimodal VLM; real-time heatmap of defects for hundreds of cars per hour.
+Product Offering
+Atlas Vision Pro Suite — multi-agent inspection orchestration (edge agent + cloud + dashboard).
+Atlas Aero Vision Module — drone + multi-agent coordination (edge + cloud).
+Revenue Model
+Annual enterprise subscription + per-vehicle inspection license.
+Hardware + Software bundle (leasing or revenue share).
+Tech Constraints
+Requires adaptive HDR lighting for indoor/outdoor variability; high accuracy (>95 %) for production acceptance; heavy OEM compliance cycles.
+Drone regulatory approval, GNSS / lighting interference, data bandwidth.
+Execution Goals
+• Deploy adaptive lighting module (as per arXiv 2508.01965).• Train multi-sensor VLM (RGB + LiDAR + thermal).• Pilot with 1 OEM & 1 Tier-1 supplier.• Integrate with OEM Digital Twin API.
+• Integrate drone perception module.• Demonstrate 3 min per car inspection outdoors.• Multi-agent fault isolation & automatic report upload.• Certification alignment (ISO 42001, NIST RMF).
+Expected Outcomes
+First OEM contract; Series A raise; ARR > S$ 1.5 M.
+Global scalability; OEM and insurance cross-sector adoption; ARR > S$ 3 M.
+Phase 3 — OEM & New-Vehicle PDI (12–18 months)
+Market focus: Manufacturers, Logistics Yards, Dealership PDIsTech readiness level: TRL 7–8 (adaptive lighting, edge-cloud orchestration, partial autonomy)
+
+Phase 4 — Scale & Autonomy (18-24 months)
+Market focus: Fleet Logistics & Outdoor OEM YardsTech readiness level: TRL 8–9 (drone inspection + multimodal autonomy)
+How: Roadmap details: 12-24 backup slide only
+
+
+OUTDATED
+
+Product Roadmap — “Atlas Vision PDI Platform”
+Goal: Deliver an end-to-end AI-native inspection workflow that automates PDI at dealerships and OEM yards, scaling later to autonomous, drone-enabled inspection systems.
+Phase
+Horizon
+Goal
+Core Deliverables
+Success Metrics
+Phase 1 — MVP (0–6 mo)
+Seed pilot
+Demonstrate AI-assisted PDI with camera-based detection on limited exterior surfaces
+• iOS-based edge agent using RGB video • YOLO11 + Grounding DINO + VLM (Qwen 2.5-VL 3B) stack • Dashboard for technician validation and analytics • Early API integration with dealer PDI systems
+– >80 % recall on major defects – 5 min scan time – Validated workflow with 1–2 OEMs
+Phase 2 — Product Market Fit (6–12 mo)
+Pre-Series A
+Expand to full-vehicle inspection and hybrid workflows
+• 360° interior/exterior scan support (multiple cameras) • LiDAR/ARKit mesh for geometric context • Technician-in-loop feedback to improve model • Cloud-based dashboard + QA analytics module
+– 90 % defect detection accuracy – ↓ inspection time by 40 % – 2–3 enterprise customers on pilot
+Phase 3 — Scalability & Monetization (12–18 mo)
+Series A
+Launch SaaS inspection platform
+• Web portal + API integration for OEM & dealers • Automated report generation & digital vehicle passport • Predictive analytics for recurring defects • Subscription & usage-based pricing
+– Recurring ARR > S$ 500 k – Partner deployments in >3 markets – Customer NPS > 70
+Phase 4 — Autonomous Inspection (18–24 mo)
+Series A+
+Enable hands-free scanning in dynamic environments
+• Drone-based outdoor inspection (ref. arXiv 2508.01965) • Adaptive lighting modules for sunlight and indoor conditions • Multi-agent coordination (vehicle + drone + edge node) • Integration with OEM digital twins
+– Full-vehicle coverage < 3 min – 98 % coverage rate – Commercial deployment with fleet partner
+How- backup slide only remove unnecessary details 
+Do not include KPI’s
+
+Technology Roadmap — “Atlas Vision Agentic VLM Architecture”
+Goal: Focus: Build the multimodal AI core that scales from iPhone edge inference to autonomous, lighting-adaptive, drone-based inspection.
+Layer
+Short Term (6 mo)
+Mid Term (12 mo)
+Long Term (24 mo)
+Perception Models
+• YOLO11n for baseline defect detection • Grounding-DINO + SAM-2 for open-vocab localization • Qwen 2.5-VL 3B for visual-language reasoning and JSON output
+• Multimodal training on internal defect dataset (fine-tuned VLM) • Edge optimization via MLX/CoreML quantization • Incremental learning with technician feedback (RLHF/LoRA)
+• Unified Atlas VLM (7B) with video and 3D inputs • Multi-modal RAG for historical defect context • Federated learning for OEM-specific fine-tuning
+Sensor & Hardware Stack
+• RGB cameras (4K @ 30 fps) on tripod or hand-held • ARKit/LiDAR mesh for depth map alignment
+• Multi-sensor rig with stereo vision + polarized lighting • Thermal/IR module for paint or surface temperature defects
+• Advanced lighting sensing (per arXiv 2508.01965) – HDR fusion, adaptive exposure • Drone-mounted sensor suite for outdoor scans
+Agentic Architecture
+• Single agent pipeline (edge → cloud fallback) • Prompt-based VLM reasoning for classification & severity
+• Multi-agent coordination (vision agent + report agent + feedback agent) • Memory store for contextual inspection history
+• Autonomous multi-agent fleet coordination (drones + ground robots) • Runtime policy manager for safety and ISO 42001 compliance
+Infrastructure & Data
+• Local data lake for PDI images/videos • Basic dashboard + annotation tool in Streamlit or Next.js
+• Cloud data hub (AWS S3 + SageMaker + QuickSight) • Active-learning loop for dataset refresh • Model evaluation dashboard
+• Data-sharing marketplace with privacy preserving training (federated + blockchain ledger) • Inter-OEM benchmarking dashboard
+Safety & Governance
+• Llama Guard 4 for multimodal prompt safety • Basic ISO 42001 checklist for AI controls
+• Automated AI audit logs + explainable VLM outputs • NIST RMF alignment for AI lifecycle
+• Full AI Governance module integrated into OEM compliance systems • Third-party certification API
+How- remove unnecessary details, backup-slide only 
+
+“Agentic VLM + Edge-to-Cloud Orchestration: The Brain Behind Atlas Vision.”
+Why:Defensibility
+Backup only
+Layer
+Description
+Key Tech
+Perception Layer
+Captures & pre-processes video and 3D data
+RGB + LiDAR + Thermal sensors, ARKit depth
+Detection Layer
+Identifies and localizes anomalies
+YOLO11 / Grounding DINO / SAM-2
+Reasoning Layer
+Interprets defect type, severity, and context
+Qwen 2.5-VL (Edge) → Qwen 7B (Cloud)
+Agentic Layer
+Coordinates tasks between detection, reporting, and feedback agents
+Multi-Agent runtime + CoreML + AWS SageMaker
+Governance Layer
+Ensures safety, explainability, and compliance
+Llama Guard 4 / ISO 42001 / NIST RMF
+Edge Convenience, Cloud Power: Seamless fallback between on-device inference and cloud VLMs.
+
+
+Continuous Learning: Technician feedback closes the RLHF loop.
+
+
+Scalable Sensors: Ready for adaptive lighting & drone integration.
+
+
+Explainable AI: Every defect comes with human-readable rationale.
+Atlas Vision brings enterprise-grade AI precision to every vehicle inspection — from showroom floor to open yard
+18
+
+Phase
+Timeframe
+Market Focus
+Core Product Objectives
+Technology Milestones
+Business Milestones / KPIs
+Phase 1 — MVP / Foundation
+Q1 – Q2 2026
+Used-Car Dealers & Car-Rental Fleets
+• Launch Atlas Vision Lite edge app (iOS)• Dealer dashboard for defect capture & reporting• Build initial dataset (>10 k images)• Deliver basic Digital Vehicle Passport v0 export (CSV/API)
+• YOLO11 + Grounding DINO + Qwen 2.5-VL 3B edge inference• VIN detection & metadata tagging• Early lighting rig spec (BOM + calibration app)
+• 80 % recall on major defects • ≤ 5 min scan • S$ 150 k ARR seed traction • 2–3 fleet pilots
+Phase 2 — Market Expansion & Insurance Pilots
+Q3 – Q4 2026
+Insurance & Repair Networks (+ begin OEM interest)
+• Launch Claim Vision API for photo/video claims• Integrate 2 insurers & repair chains• Technician-in-loop feedback & RLHF loop
+• LoRA-tuned Qwen for damage severity• Multi-camera + LiDAR fusion• ISO 42001 logging v0
+• 90 % alignment with human assessors • S$ 500 k ARR • Dataset > 30 k frames • 1 OEM intro workshop
+VPC Fast-Lane Track (Parallel)
+Starts Q3 2026 → continues through Phase 3
+OEM Vehicle Processing Centers (VPCs)
+• Design & deploy VPC Pilot Program (1 site)• Develop VPC Drive-Through Kit (rig + adaptive lighting)• Deliver VIN-linked Digital Vehicle Passport API• Stage-gate ROI report (time per vehicle, miss rate)
+• Adaptive lighting v0 (HDR presets)• ERP/VPC connector stub (SAP VMS/Oracle)• Edge–cloud agent coordination for multi-camera rig
+• 1 OEM/VPC pilot signed by Q4 2026 • Inspection time ↓ 40 % • Missed defects < 5 % • Baseline ROI report ready for Series A
+Phase 3 — OEM / PDI Suite Launch
+Q1 – Q2 2027
+OEM & Dealership Networks (incl. VPC sites)
+• Release Atlas Vision Pro Suite (SaaS dashboard + API)• Predictive analytics for recurring defects• Integrate Digital Vehicle Passport into OEM ERP flow
+• Adaptive lighting v1 + HDR fusion engine• Edge–cloud orchestration GA• Predictive defect analytics pipeline
+• 95 % accuracy • ≤ 3 min inspection • S$ 1.5 M ARR • 1 OEM contract signed • ISO 42001 audit pass
+Phase 4 — Autonomous Inspection & Scaling
+Q3 – Q4 2027
+Fleet Logistics & Outdoor OEM Yards
+• Pilot Atlas Aero Vision (drone inspection)• Enable multi-agent autonomy (drone + ground + cloud)• Federated learning for OEM-specific models
+• Multi-sensor fusion (RGB + thermal + LiDAR)• Agentic fleet coordination runtime• Federated training prototype
+• 97 % accuracy • ≤ 3 min per vehicle • S$ 3 M ARR • Series A+ raise • Drone certification progress
+How: Roadmap details
+Backup only
+
+Module
+Phase (Launch)
+Primary Function
+Key Users / Context
+Technology Core
+1. Atlas Vision Lite (Edge App)
+Phase 1 – Q1 2026
+Mobile-based AI inspection app for used/rental fleets. Captures video scans, detects surface defects, generates preliminary reports.
+Fleet technicians, used-car dealers, rental centers
+YOLO11 + Grounding DINO on-device; CoreML; iOS app; VIN detection
+2. Dealer / Fleet Dashboard
+Phase 1 – Q1 2026
+Web dashboard for managing inspection results, exporting reports, and tracking rework actions.
+Dealer staff, quality supervisors
+Next.js / Supabase stack + cloud database
+3. Digital Vehicle Passport (DVP)
+Phase 1 → extended through Phase 3
+Creates VIN-linked inspection records combining image, defect metadata, and technician feedback. Forms the audit trail for OEMs and insurers.
+Dealers, insurers, OEM quality teams
+JSON / API export (CSV v0 → ERP-integrated v1); VIN OCR + hash
+4. Claim Vision API
+Phase 2 – Q3 2026
+API service for insurers to assess photo/video evidence, perform damage classification, and score severity automatically.
+Insurance carriers, workshops
+LoRA-tuned Qwen 2.5-VL; REST API + SageMaker endpoint
+5. Technician Feedback Agent
+Phase 2 – Q4 2026
+Captures human validation on AI-flagged defects to continuously fine-tune model accuracy (RLHF loop).
+Technicians, quality engineers
+Feedback pipeline + active-learning trigger; RLHF fine-tuning
+6. Adaptive Lighting Control Module
+Phase 2 → Phase 3
+Hardware + software module managing lighting profiles (HDR, polarization) for consistent image quality in VPCs.
+VPC operators, OEM QA teams
+Lighting sensor controller; HDR fusion; calibration app
+7. VPC Drive-Through Kit
+VPC Fast-Lane – Q3 2026
+Fixed-rig inspection system for Vehicle Processing Centers. Includes multi-camera array, adaptive lighting, and VIN-linked scanning workflow.
+OEM VPC quality teams
+Edge AI agent; adaptive lighting v0; ERP connector stub
+8. ERP / VPC Connector API
+VPC Fast-Lane – Q4 2026 → Phase 3
+Middleware integrating Atlas Vision data with OEM VPC / ERP systems (SAP VMS, Oracle MES, etc.).
+OEM IT, manufacturing systems integrators
+REST/GraphQL connector; VIN-keyed sync; SSO (OAuth 2)
+9. Atlas Vision Pro Suite (SaaS Platform)
+Phase 3 – Q1 2027
+Enterprise-grade dashboard for OEMs / dealerships: full inspection management, analytics, audit trails.
+OEM QA / Dealer networks
+React + FastAPI backend + PostgreSQL + QuickSight analytics
+10. Predictive Defect Analytics Engine
+Phase 3 – Q2 2027
+Detects recurring issues across vehicles, suppliers, or batches. Supports supplier scorecarding.
+OEM quality, supplier mgmt teams
+Time-series & graph analytics; transformer embeddings; AWS SageMaker
+11. Governance & Compliance Dashboard
+Phase 3 – Q2 2027
+Monitors model accuracy, bias, audit logs, and ISO 42001 / NIST RMF compliance.
+OEM compliance officers
+Llama Guard 4 integration; audit DB + Explainable AI summaries
+12. Atlas Aero Vision Module
+Phase 4 – Q3 2027
+Drone-based autonomous inspection for outdoor OEM yards and logistics depots.
+Fleet operators, logistics QA teams
+Multi-sensor fusion (RGB, thermal, LiDAR); drone autonomy stack
+13. Multi-Agent Coordination Runtime
+Phase 4 – Q4 2027
+Orchestrates collaboration between edge, cloud, and drone agents for distributed inspection and reporting.
+OEM fleet IT / Atlas Ops team
+Agentic workflow engine (CoreML + Ray/Redis backend)
+14. Federated Learning Hub
+Phase 4 – Q4 2027
+Privacy-preserving model updates across OEM partners; no raw data sharing.
+OEM data science / compliance teams
+Flower FL framework + secure parameter aggregation
+15. Data Marketplace Interface (Future)
+Post Series A+
+Optional marketplace for defect datasets shared among OEMs / insurers under governance contracts.
+Strategic partners, regulators
+Smart-contract ledger + access controls + tokenized usage
+Product module details
+Backup only
+
+Technical Risks and Mitigation plan
+Challenge
+Impact
+Mitigation
+Lighting Variability
+False positives/negatives on reflective surfaces
+Implement adaptive HDR fusion (Phase 3); controlled light pods for early pilots
+Model Generalization
+Different car colors & finishes affect accuracy
+Domain-adaptive fine-tuning per client + feedback RLHF loops
+Hardware Calibration
+Inconsistent camera rigs between sites
+Supply standardized rig or calibration app; optional rental hardware kit
+Data Privacy / Ownership
+Client reluctance to share images
+Federated learning setup (Phase 4) + OEM data governance contracts
+Edge Compute Limits (iPhone / iPad)
+Latency & thermal constraints
+Use compressed VLMs (3B SmolVLM) + cloud fallback orchestration
+Drone Regulation (future)
+Deployment delays outdoors
+Early trials on private yards; pre-certification under CAAS/FAA equivalents
+
+LATEST INSIGHTS
+Next-Generation Robotics in Automotive Manufacturing Market
+Collaborative robots for quality control: an overview of recent studies and emerging trends
+Artificial Intelligence for Quality Defects in the Automotive Industry: A Systemic Review
+Hyundai Motor Group’s Metaplant America: Opened in Georgia, US. The plant is built around AI-powered tech, robotics, and digital twins. Vehicles pass through ≥ 23 AI or robotic systems during assembly, including inspection systems. Business Insider
+Ford: Deploying AI cameras (AiTriz, MAIVS) to catch hard-to-spot manufacturing defects in real time, e.g. millimeter misalignments, incorrect parts. Helps reduce costly recalls. Business Insider
+China – Humanoid Robots: Some startups are placing robots into factory lines for tasks including quality control & assembly. The example of MagicLab etc. indicates robotic systems are being trained for inspection and related tasks. Reuters
+Summarize and create post- include link to insight articles only
+TitleSource / DateKey Findings Relevant for Automotive Quality Inspection / Robotics & AIRelevance & Limitations
+
+Collaborative robots for quality control: an overview of recent studies and emerging trendsJournal of Intelligent Manufacturing, April 2025 SpringerLinkExamines current uses of “cobots” in quality assurance/inspection. Highlights that while material handling, assembly and precise positioning are relatively mature, their integration into QA & inspection is still under-explored. Trends include more automation in visual inspection, collaborative human-robot setups, sensor integration. SpringerLinkGood academic grounding; but many case studies are small scale or lab/academic environments rather than full production end-of-line inspection.Artificial Intelligence for 
+
+Quality Defects in the Automotive Industry: A Systemic ReviewSensors (Basel), 2025 ResearchGate+1Survey of AI implementations to detect defects, improve process automation, predictive maintenance. Deep learning, neural networks, PCA etc. Key findings: improved defect detection, reduced reliance on manual inspection, more zero-defect ambitions. PubMed+1Focus is often on parts, sub‐processes, not entire vehicle pre-delivery; also many implementations still require human oversight or are semi-automated.
+
+New AI and 3D Systems Help Car makers with Quality InspectionEngineering News (South Africa), August 2025 Engineering NewsExamples: car doors (which have many components) being inspected using 3D sensors + dual-camera + AI; battery caps inspections; welding/sealing/ seam areas. The article reports defect rate improvements (10-15%) through these systems. Engineering NewsVery relevant to end-of-line and component inspection. May not cover full vehicle inspection. Also, data tends to be from newer EV-focused plants or high-cost parts.
+
+Inspection Robots Market to Reach $4.6 Billion by 2030Meticulous Research, 2024-25 meticulousresearch.comForecasts the global inspection robots market (stationary + mobile + types of inspection) to reach about $4.6B by 2030, with strong CAGR (~21.6%) from 2024 to 2030. meticulousresearch.comUseful for benchmarking: that figure includes many kinds of inspection (not purely automotive, not purely end-of-line). Helps set realistic expectations.
+
+Next-Generation Robotics in Automotive Manufacturing MarketGlobeNewswire, 2025 report GlobeNewswireThis examines the broader “next-generation robotics” space in automotive manufacturing, including quality inspection, AI-driven systems, sensor fusion, etc. The market is projected to grow (from ~$11.55B in 2025 to ~$36.41B by 2034). GlobeNewswireThis includes many applications (welding, painting, handling etc.), not exclusively inspection. Still, it shows that inspection is a recognized part of the use case set.
+
+Automotive Robotics Market Size, Share & Industry Growth Report, 2030Mordor Intelligence (recent) Mordor IntelligenceVehicle manufacturers dominate; there is growing interest in trim & final inspection with AI vision; collaborative robots (cobots) are being considered for ergonomic or precision tasks previously done by humans. Mordor IntelligenceGives good support for your use-case (end of value chain inspection). But again, includes broad robotics uses; inspection is a segment.
+
+22

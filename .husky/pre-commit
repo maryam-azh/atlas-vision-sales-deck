@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Run lint-staged for linting and type-checking
+npx lint-staged
+
+# Run quick smoke test
+echo "Running quick smoke test..."
+npm run test:quick

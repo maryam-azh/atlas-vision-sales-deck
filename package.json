@@ -1,0 +1,69 @@
+{
+  "name": "atlas-vision",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "vercel:build": "tsc && vite build",
+    "preview": "vite preview",
+    "simulator": "cd simulator && vite",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:quick": "playwright test --grep 'should not be empty'",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "typecheck": "tsc --noEmit",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petteriTeikari/atlas-vision-deck.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/petteriTeikari/atlas-vision-deck/issues"
+  },
+  "homepage": "https://github.com/petteriTeikari/atlas-vision-deck#readme",
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "animejs": "^4.2.2",
+    "d3": "^7.9.0",
+    "framer-motion": "^12.23.22",
+    "gsap": "^3.13.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-swipeable": "^7.0.2",
+    "recharts": "^2.6.0",
+    "vite": "^7.1.9"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/d3": "^7.4.3",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "@types/react-swipeable": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.37.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.9.3"
+  }
+}
