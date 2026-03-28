@@ -5,35 +5,35 @@ export default function Slide5_Product() {
   const layers = [
     {
       icon: "",
-      title: "Intelligent Robotic Systems",
+      title: "Multimodal Vision Hardware",
       color: "purple",
-      modules: ["Drones", "Ground Robots", "Mobile Vision", "Autonomous Mobility Control"],
-      outcome: "24/7 inspection coverage and scalability across OEM yards",
+      modules: [ "Ground Robots", "Mobile Vision", "Autonomous Mobility Control"],
+      outcome: "Data capture across diverse inspection environments",
       category: "EDGE LAYER",
       order: 1
     },
     {
       icon: "",
-      title: "Agentic Orchestration",
+      title: "Agentic Orchestrator",
       color: "blue",
-      modules: ["Task Scheduler", "Policy Framework", "Context Manager"],
-      outcome: "Predictable, explainable operation across inspection modes",
+      modules: ["Policy Framework", "Context Manager", "Governance & Security", "Integration Manager"],
+      outcome: "Intelligent & explainable operation across inspection workflows",
       category: "CONTROL LAYER",
       order: 2
     },
     {
       icon: "",
-      title: "Multimodal AI Engine",
+      title: "Multimodal Vision Engine",
       color: "white",
-      modules: ["Proprietary Vision-Language Models", "hybrid edge/cloud stack"],
-      outcome: "Detects defects with high accuracy",
+      modules: ["Agentic Vision-Language Models",  "Visual Reasoning Models"],
+      outcome: "Defects detected and classified with contextual understanding",
       category: "AI CORE",
       isCore: true,
       order: 3
     },
     {
       icon: "",
-      title: "Continuous Learning & Data Pipeline",
+      title: "Continuous Learning ",
       color: "peach",
       modules: ["Technician Feedback", "RLHF Pipeline", "Synthetic Data Gen", "Dataset Versioning"],
       outcome: "Continuous model accuracy improvement and dataset management",
@@ -42,10 +42,10 @@ export default function Slide5_Product() {
     },
     {
       icon: "",
-      title: "Technician Assistant App",
+      title: "Human Verification Interface",
       color: "cream",
-      modules: ["iOS/Edge App", "Voice-Visual Interface"],
-      outcome: "Human-in-loop trust and compliance",
+      modules: ["RLHF", "Voice-Visual Interface"],
+      outcome: "Validated defects and human-AI collaboration for edge cases and continuous learning",
       category: "HUMAN INTERFACE",
       order: 5
     },
@@ -53,14 +53,14 @@ export default function Slide5_Product() {
       icon: "",
       title: "Enterprise Integration",
       color: "pink",
-      modules: ["Digital Vehicle Passport (DVP)", "ERP Connector", "VPC Gateway Connector", "Central Dashboard"],
-      outcome: "Supply chain quality intelligence and VPC automation",
+      modules: ["Workshop Connector", "ERP Connector", "VPC Gateway Connector", "Central Dashboard"],
+      outcome: "Supply chain quality intelligence and Enterprise workflow automation",
       category: "INTEGRATION LAYER",
       order: 6
     },
     {
       icon: "",
-      title: "Governance & Analytics",
+      title: "Analytics & Reporting",
       color: "mint",
       modules: ["Compliance Dashboard", "Explainable AI Reports", "Performance Monitoring", "Audit Trails"],
       outcome: "Regulatory compliance, transparency, and continuous system oversight",
@@ -120,7 +120,7 @@ export default function Slide5_Product() {
         <div className="flex-shrink-0">
           <h2 className="architecture-title text-4xl sm:text-5xl lg:text-6xl font-black mb-2 sm:mb-3 opacity-0">SOLUTION ARCHITECTURE</h2>
           <p className="architecture-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">
-            Our product is adaptable to the evolving needs of modern vehicle inspection.</p>
+            We adapt to your evolving needs for modern vehicle inspection.</p>
         </div>
 
         {/* Mobile & Tablet: Simple Stacked/Grid Layout */}
@@ -135,106 +135,91 @@ export default function Slide5_Product() {
         </div>
 
         {/* Desktop: Complex Architecture Layout with SVG */}
-        <div className="hidden lg:block relative w-full" style={{ minHeight: '460px', paddingBottom: '60px' }}>
-        {/* Legend container - below main content, no overlap */}
-        <div className="absolute left-0 flex gap-6 text-sm font-mono z-20" style={{ bottom: '5px' }}>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-0.5 bg-gray-600"></div>
-            <span>Data Flow</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-0.5 border-t-2 border-dashed border-gray-600"></div>
-            <span>Feedback Loop</span>
-          </div>
-        </div>
+        <div className="hidden lg:block relative w-full" style={{ minHeight: '520px' }}>
 
           <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }}>
-            {/* Connection: Edge → Control */}
-            <line x1="29.15%" y1="13.5%" x2="38%" y2="13.5%" stroke="#6B7280" strokeWidth="3" markerEnd="url(#arrowhead)" />
-            <text x="31.5%" y="11.5%" fill="black" fontSize="13" fontWeight="bold" fontFamily="monospace">CAPTURE</text>
-            
-            {/* Connection: Control → AI Core */}
-            <line x1="50.075%" y1="27%" x2="50.075%" y2="33%" stroke="#6B7280" strokeWidth="3" markerEnd="url(#arrowhead)" />
-            <text x="51.5%" y="30%" fill="black" fontSize="13" fontWeight="bold" fontFamily="monospace">ORCHESTRATE</text>
-            
-            {/* Connection: AI Core → Learning */}
-            <line x1="66%" y1="46.5%" x2="72.85%" y2="46.5%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" markerEnd="url(#arrowhead-dashed)" />
-            <text x="68%" y="44.5%" fill="black" fontSize="13" fontWeight="bold" fontFamily="monospace">LEARN</text>
-            
-            {/* Connection: AI Core → Human */}
-            <line x1="34%" y1="46.5%" x2="17.075%" y2="46.5%" stroke="#6B7280" strokeWidth="3" />
-            <line x1="17.075%" y1="46.5%" x2="17.075%" y2="66%" stroke="#6B7280" strokeWidth="3" markerEnd="url(#arrowhead)" />
-            <text x="20%" y="56%" fill="black" fontSize="13" fontWeight="bold" fontFamily="monospace">VALIDATE</text>
-            
-            {/* Connection: Enterprise → Learning */}
-            <line x1="62.15%" y1="79.5%" x2="68%" y2="79.5%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="68%" y1="79.5%" x2="68%" y2="62%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="68%" y1="62%" x2="84.575%" y2="62%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="84.575%" y1="62%" x2="84.575%" y2="60%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" markerEnd="url(#arrowhead-dashed)" />
-            <text x="65%" y="77%" fill="black" fontSize="12" fontWeight="bold" fontFamily="monospace">FEEDBACK</text>
-            
-            {/* Connection: Human → Enterprise */}
-            <line x1="29.15%" y1="79.5%" x2="38%" y2="79.5%" stroke="#6B7280" strokeWidth="3" markerEnd="url(#arrowhead)" />
-            <text x="32%" y="77.5%" fill="black" fontSize="13" fontWeight="bold" fontFamily="monospace">INTEGRATE</text>
-
-            {/* Connection: Governance → AI Engine */}
-            <line x1="72.85%" y1="13.5%" x2="68%" y2="13.5%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="68%" y1="13.5%" x2="68%" y2="40%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="68%" y1="40%" x2="66%" y2="40%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" markerEnd="url(#arrowhead-governance)" />
-            <text x="69%" y="27%" fill="black" fontSize="11" fontWeight="bold" fontFamily="monospace">GOVERN</text>
-            
-            {/* Connection: Governance → Learning */}
-            <line x1="84.575%" y1="27%" x2="84.575%" y2="33%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" markerEnd="url(#arrowhead-governance)" />
-            <text x="86%" y="30%" fill="black" fontSize="11" fontWeight="bold" fontFamily="monospace">MONITOR</text>
-            
-            {/* Connection: Governance → Enterprise */}
-            <line x1="97%" y1="13.5%" x2="99%" y2="13.5%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="99%" y1="13.5%" x2="99%" y2="97%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="99%" y1="97%" x2="50.075%" y2="97%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" />
-            <line x1="50.075%" y1="97%" x2="50.075%" y2="93%" stroke="#6B7280" strokeWidth="3" strokeDasharray="6,4" markerEnd="url(#arrowhead-governance)" />
-            <text x="70%" y="95%" fill="black" fontSize="11" fontWeight="bold" fontFamily="monospace">AUDIT</text>
-
-            {/* Arrow markers */}
             <defs>
-              <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
+              {/* Forward arrowhead (line end) */}
+              <marker id="arr" markerWidth="6" markerHeight="6" refX="6" refY="2" orient="auto">
                 <polygon points="0 0, 6 2, 0 4" fill="#6B7280" />
               </marker>
-              <marker id="arrowhead-dashed" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-                <polygon points="0 0, 6 2, 0 4" fill="#6B7280" />
-              </marker>
-              <marker id="arrowhead-governance" markerWidth="6" markerHeight="6" refX="5" refY="2" orient="auto">
-                <polygon points="0 0, 6 2, 0 4" fill="#6B7280" />
+              {/* Backward arrowhead (line start, points outward) */}
+              <marker id="arr-s" markerWidth="6" markerHeight="6" refX="0" refY="2" orient="auto">
+                <polygon points="6 0, 0 2, 6 4" fill="#6B7280" />
               </marker>
             </defs>
+
+            {/* ── A. Hardware ↔ Hub  |  CAPTURE / FEEDBACK  (two-way) ── */}
+            <line x1="29.15%" y1="30%" x2="35%" y2="30%" stroke="#6B7280" strokeWidth="1.5" markerStart="url(#arr-s)" />
+            <line x1="35%" y1="30%"  x2="35%" y2="46.5%" stroke="#6B7280" strokeWidth="1.5" />
+            <line x1="35%" y1="46.5%" x2="38%" y2="46.5%" stroke="#6B7280" strokeWidth="1.5" markerEnd="url(#arr)" />
+            <text x="29.5%" y="36%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">CAPTURE /</text>
+            <text x="29.5%" y="39%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">FEEDBACK</text>
+
+            {/* ── B. Vision Engine ↔ Hub  |  DETECT / CLASSIFY  (two-way) ── */}
+            <line x1="50.075%" y1="27%" x2="50.075%" y2="33%" stroke="#6B7280" strokeWidth="1.5" markerStart="url(#arr-s)" markerEnd="url(#arr)" />
+            <text x="51.5%" y="29%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">DETECT /</text>
+            <text x="51.5%" y="32%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">CLASSIFY</text>
+
+            {/* ── C. Human Verification ↔ Hub  |  VALIDATE  (two-way) ── */}
+            <line x1="72.85%" y1="30%" x2="65%" y2="30%" stroke="#6B7280" strokeWidth="1.5" markerStart="url(#arr-s)" />
+            <line x1="65%" y1="30%"  x2="65%" y2="44%"  stroke="#6B7280" strokeWidth="1.5" />
+            <line x1="65%" y1="44%"  x2="62.15%" y2="44%" stroke="#6B7280" strokeWidth="1.5" markerEnd="url(#arr)" />
+            <text x="66%" y="38%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">VALIDATE</text>
+
+            {/* ── D. Hub → Enterprise  |  SYSTEM UPDATES  (one-way) ── */}
+            <line x1="62.15%" y1="56%" x2="68%"    y2="56%"   stroke="#6B7280" strokeWidth="1.5" />
+            <line x1="68%"    y1="56%" x2="68%"    y2="69.5%" stroke="#6B7280" strokeWidth="1.5" />
+            <line x1="68%"    y1="69.5%" x2="72.85%" y2="69.5%" stroke="#6B7280" strokeWidth="1.5" markerEnd="url(#arr)" />
+            <text x="63%" y="54%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">SYSTEM UPDATES</text>
+
+            {/* ── E. Continuous Learning ↔ Hub  |  DATASET / MODEL  (two-way) ── */}
+            <line x1="50.075%" y1="60%" x2="50.075%" y2="66%" stroke="#6B7280" strokeWidth="1.5" markerStart="url(#arr-s)" markerEnd="url(#arr)" />
+            <text x="52%" y="63%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">DATASET /</text>
+            <text x="52%" y="66%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">MODEL</text>
+
+            {/* ── F. Hub → Analytics  |  INSIGHTS  (one-way) ── */}
+            <line x1="38%"    y1="56%" x2="32%"    y2="56%"   stroke="#6B7280" strokeWidth="1.5" />
+            <line x1="32%"    y1="56%" x2="32%"    y2="69.5%" stroke="#6B7280" strokeWidth="1.5" />
+            <line x1="32%"    y1="69.5%" x2="29.15%" y2="69.5%" stroke="#6B7280" strokeWidth="1.5" markerEnd="url(#arr)" />
+            <text x="33%" y="54%" fill="black" fontSize="10" fontWeight="bold" fontFamily="monospace">INSIGHTS</text>
+
           </svg>
 
-          {/* Components positioned absolutely for custom flow layout */}
-          <div className="absolute" style={{ top: '0%', left: '5%', width: '24.15%', height: '27%' }}>
+          {/* Components positioned as hexagon - HEXAGON TOPOLOGY */}
+          {/* Top-left: Multimodal Vision Hardware */}
+          <div className="absolute" style={{ top: '10%', left: '5%', width: '24.15%', height: '27%' }}>
             {renderModule(layers[0], colorClasses)}
           </div>
           
+          {/* Top-center: Multimodal Vision Engine */}
           <div className="absolute" style={{ top: '0%', left: '38%', width: '24.15%', height: '27%' }}>
-            {renderModule(layers[1], colorClasses)}
-          </div>
-          
-          <div className="absolute" style={{ top: '33%', left: '34%', width: '32%', height: '27%', zIndex: 1 }}>
             {renderModule(layers[2], colorClasses, true)}
           </div>
           
-          <div className="absolute" style={{ top: '0%', right: '3%', width: '24.15%', height: '27%' }}>
-            {renderModule(layers[6], colorClasses)}
-          </div>
-          
-          <div className="absolute" style={{ top: '33%', right: '3%', width: '24.15%', height: '27%' }}>
-            {renderModule(layers[3], colorClasses)}
-          </div>
-          
-          <div className="absolute" style={{ top: '66%', left: '5%', width: '24.15%', height: '27%' }}>
+          {/* Top-right: Human Verification Interface */}
+          <div className="absolute" style={{ top: '10%', right: '3%', width: '24.15%', height: '27%' }}>
             {renderModule(layers[4], colorClasses)}
           </div>
           
-          <div className="absolute" style={{ top: '66%', left: '38%', width: '24.15%', height: '27%' }}>
+          {/* Bottom-right: Enterprise Integration */}
+          <div className="absolute" style={{ top: '56%', right: '3%', width: '24.15%', height: '27%' }}>
             {renderModule(layers[5], colorClasses)}
+          </div>
+          
+          {/* Bottom-center: Continuous Learning */}
+          <div className="absolute" style={{ top: '66%', left: '38%', width: '24.15%', height: '27%' }}>
+            {renderModule(layers[3], colorClasses)}
+          </div>
+          
+          {/* Bottom-left: Analytics & Reporting */}
+          <div className="absolute" style={{ top: '56%', left: '5%', width: '24.15%', height: '27%' }}>
+            {renderModule(layers[6], colorClasses)}
+          </div>
+          
+          {/* Center: Agentic Orchestrator */}
+          <div className="absolute" style={{ top: '33%', left: '38%', width: '24.15%', height: '27%', zIndex: 2 }}>
+            {renderModule(layers[1], colorClasses)}
           </div>
         </div>
       </div>

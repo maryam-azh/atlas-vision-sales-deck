@@ -15,7 +15,7 @@ const steps = [
     id: 1,
     label: 'CAPTURE',
     bgColor: 'rgb(255, 218, 224)',
-    description: 'Mobile, mobile robots, or drones scan all around the vehicle.',
+    description: 'Mobile, or mobile robots scan all around the vehicle.',
     detailedDescription:
       'Multi-modal capture system enabled by various hardware setups for optimal data collection.',
   },
@@ -23,9 +23,9 @@ const steps = [
     id: 2,
     label: 'DETECT',
     bgColor: 'rgb(191, 219, 254)',
-    description: 'AI agent selects models to identify defects in real time.',
+    description: 'Vision agent selects models to identify defects in real time.',
     detailedDescription:
-      'Orchestrated agent with a library of computer vision models to select in run-time.',
+      'Vision agent with a library of computer vision models to select in run-time.',
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const steps = [
     id: 5,
     label: 'INTEGRATE',
     bgColor: '#FFB5B5',
-    description: 'AI synchronizes findings with external systems for reporting.',
+    description: 'AI orchestrator coordinates with external systems for continuity.',
     detailedDescription:
       'Intelligent data flow for downstream repair workflow and enterprise integration.',
   },

@@ -34,7 +34,7 @@ export default function ProductRoadmapS() {
       phase: "Phase 1",
       title: "Atlas Vision Lite",
       description: "Edge app for rental and used-car inspection",
-      timeline: "Q1–Q2 2026",
+      timeline: "Q2–Q3 2026",
       role: "Early market traction and dataset generation",
       color: "#D0E8E1",
       badgeColor: "bg-black"
@@ -42,64 +42,54 @@ export default function ProductRoadmapS() {
     {
       id: 2,
       phase: "Phase 2",
-      title: "Atlas Claim Vision API",
-      description: "Damage scoring for insurers & repair networks",
-      timeline: "Q3–Q4 2026",
-      role: "Expands SaaS footprint in insurance; validates VLM performance",
+      title: "Atlas Vision Restore",
+      description: "Mobile scanner integrated into existing workshop workflows",
+      timeline: "Q3 2026–Q1 2027",
+      role: "Expands SaaS footprint in insurance & repair; validates VLM performance",
       color: "#AAC8E2",
-      badgeColor: "bg-black"
-    },
-    {
-      id: 2.5,
-      phase: "Phase 2.5",
-      title: "Atlas VPC Suite (Fast-Lane)",
-      description: "Agentic inspection automation for Vehicle Processing Centers",
-      timeline: "Q3 2026 – Q2 2027",
-      role: "OEM entry wedge; rapid ROI pilot-to-production path",
-      color: "#F5F3E6",
       badgeColor: "bg-black"
     },
     {
       id: 3,
       phase: "Phase 3",
-      title: "Pro Suite + Ground Agent",
-      description: "AI-driven inspection automation + mobile robotic agent",
-      timeline: "Q3 2026 → Q2 2027",
-      role: "Core OEM adoption path with semi-autonomous ground scanning",
-      color: "#F6D9C9",
+      title: "Atlas Vision Suite — VPC",
+      description: "Scaled agentic inspection for Vehicle Processing Centers & warehouses",
+      timeline: "Q1 2027 – Q1 2028",
+      role: "OEM entry wedge; rapid ROI pilot-to-production path",
+      color: "#F5F3E6",
       badgeColor: "bg-black"
     },
     {
       id: 4,
       phase: "Phase 4",
-      title: "Atlas Aero Vision",
-      description: "Semi-autonomous drone-based outdoor inspection",
-      timeline: "Q3–Q4 2027",
-      role: "Extends coverage to open yards; autonomy demo & regulatory readiness",
-      color: "#E6C8C8",
+      title: "Atlas Ground Vision Suite",
+      description: "Horizontal scale-up with semi-autonomous ground-robot hardware",
+      timeline: "Q1 2028 – Q4 2028",
+      role: "Core OEM adoption path with semi-autonomous ground scanning",
+      color: "#F6D9C9",
       badgeColor: "bg-black"
     }
   ];
 
   const foundationModules = [
     {
-      name: "Governance & Analytics",
-      description: "Compliance, explainability, continuous monitoring",
+      name: "Integration Management",
+      description: "Backward compatibility, robust API versioning, and wrappers for reliability in live deployments.",
       color: "#D0E8E1"
     },
     {
-      name: "Calibration & Lighting Kit",
-      description: "Hardware & software calibration for consistent imaging",
+      name: "Containerized Scaling",
+      description: "Securely isolates each device or robot as an independent unit for maximum scalability and security.",
       color: "#AAC8E2"
     },
     {
-      name: "Data & Feedback Pipeline",
-      description: "Continuous model improvement & dataset management",
+      name: "Cost-aware Architecture",
+      description: "Inference gradually migrates on device to minimize bandwidth once performance is stable.",
       color: "#F6D9C9"
     },
     {
-      name: "Vision Orchestrator SDK",
-      description: "Developer toolkit for system integration and customization",
+      name: "Governance Engine",
+      description: "Adopting robust AI Governance framework to meet regulatory requirements across use cases.",
       color: "#F5F3E6"
     }
   ];
@@ -124,7 +114,7 @@ export default function ProductRoadmapS() {
             PRODUCT ROADMAP
           </h1>
           <p className="roadmap-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">
-            The product evolves from edge inspection to fully agentic quality automation.
+            From mobile only workshop inspection to robotic fleet inspections in Vehicle Processing Centers (VPCs).
           </p>
         </div>
 
@@ -299,27 +289,15 @@ export default function ProductRoadmapS() {
             </g>
 
             <g
-              onMouseEnter={() => setHoveredMilestone(2.5)}
-              onMouseLeave={() => setHoveredMilestone(null)}
-              onClick={() => setHoveredMilestone(hoveredMilestone === 2.5 ? null : 2.5)}
-              style={{ cursor: 'pointer' }}
-            >
-              <circle cx="600" cy="220" r="30" fill="#F5F3E6" stroke="#000" strokeWidth="2" filter="url(#glow)">
-                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="1.125s"/>
-              </circle>
-              <text x="600" y="230" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">2.5</text>
-            </g>
-
-            <g
               onMouseEnter={() => setHoveredMilestone(3)}
               onMouseLeave={() => setHoveredMilestone(null)}
               onClick={() => setHoveredMilestone(hoveredMilestone === 3 ? null : 3)}
               style={{ cursor: 'pointer' }}
             >
-              <circle cx="470" cy="300" r="30" fill="#F6D9C9" stroke="#000" strokeWidth="2" filter="url(#glow)">
-                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+              <circle cx="470" cy="300" r="30" fill="#F5F3E6" stroke="#000" strokeWidth="2" filter="url(#glow)">
+                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="1.125s"/>
               </circle>
-              <text x="470" y="312" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">3</text>
+              <text x="470" y="310" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">3</text>
             </g>
 
             <g
@@ -328,10 +306,10 @@ export default function ProductRoadmapS() {
               onClick={() => setHoveredMilestone(hoveredMilestone === 4 ? null : 4)}
               style={{ cursor: 'pointer' }}
             >
-              <circle cx="900" cy="380" r="30" fill="#E6C8C8" stroke="#000" strokeWidth="2" filter="url(#glow)">
-                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="2.25s"/>
+              <circle cx="875" cy="380" r="30" fill="#F6D9C9" stroke="#000" strokeWidth="2" filter="url(#glow)">
+                <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="1.5s"/>
               </circle>
-              <text x="900" y="390" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">4</text>
+              <text x="875" y="392" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">4</text>
             </g>
           </svg>
 
@@ -341,9 +319,8 @@ export default function ProductRoadmapS() {
               className={`absolute z-30 animate-fadeIn pointer-events-none ${
                 hoveredMilestone === 1 ? 'top-[5%] left-[28%]' :
                 hoveredMilestone === 2 ? 'top-[20%] left-[55%]' :
-                hoveredMilestone === 2.5 ? 'top-[40%] left-[45%]' :
-                hoveredMilestone === 3 ? 'top-[55%] left-[35%]' :
-                'bottom-[5%] right-[15%]'
+                hoveredMilestone === 3 ? 'top-[52%] left-[28%]' :
+                'top-[68%] left-[62%]'
               }`}
             >
               <div 
@@ -373,10 +350,10 @@ export default function ProductRoadmapS() {
         </div>
 
         {/* Foundation Layer */}
-        <div className="pt-4">
+        <div className="pt-1">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-4 sm:w-6 h-1 bg-black rounded"></div>
-            <h3 className="text-xs sm:text-sm md:text-base lg:text-xl font-bold">
+            <h3 className="text-xs sm:text-sm md:text-base lg:text-l">
               FOUNDATION MODULES THROUGHOUT ALL PHASES
             </h3>
             <div className="flex-1 h-1 bg-black rounded"></div>

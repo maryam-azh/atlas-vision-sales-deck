@@ -1,316 +1,349 @@
 import React from 'react';
 import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  ReferenceDot,
-  Label,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid,
+  Tooltip, ResponsiveContainer, ReferenceDot, Label,
 } from 'recharts';
 
-// ---------- 1) Data ----------
-
-const revenueData = [
-  { month: 0, baseArr: 0, diArr: 0 },
-
+// ── Data ──────────────────────────────────────────────────────────────────────
+const pricingData = [
+  { month: 0, coreValue: 0, premiumValue: 0, consultancyValue: 150000 },
+  
+  {
+    month: 2,
+    coreValue: 150000,
+    premiumValue: 0,
+    consultancyValue: 160000,
+    phase: "1",
+    name: "Atlas Vision Lite - workshop",
+    priceRange: "Setup . Multi-site Monthly ",
+    pricingNote: "Unlimited use with mobile hardware provided",
+    tagline: "Proof of concept package with validated performance",
+    highlights: [
+      "Core vision capabilities with HITL workflows",
+      "Setup includes calibration and training",
+      "Default security & compliance features included",
+    ],
+    color: "#A7C7E7",
+  },
   {
     month: 6,
-    baseArr: 150000,
-    diArr: 0,
-    phase: "1",
-    name: "Lite",
-    details: "Per-scan SaaS ($2–3 per scan)",
-    arrRange: "$150K ARR",
-    color: "#A7C7E7",
-    revenueTypes: ["SaaS Subscriptions", "Per-Scan / API Fees"],
+    coreValue: 0,
+    premiumValue: 500000,
+    consultancyValue: 250000,
+    phase: "2",
+    name: "Atlas Vision Restore - workshop",
+    priceRange: "Custom . Multi-site Monthly",
+    pricingNote: "",
+    tagline: "Mobile scanner pluged into your existing workflows",
+    highlights: [
+      "Improved performance for defect range expansion",
+      "CI/CD with HITL and continuous learning",  
+      "Workflow integrations and custom AI Governance",
+    ],
+    color: "#F2D2BD",
   },
   {
     month: 12,
-    baseArr: 500000,
-    diArr: 0,
-    phase: "2",
-    name: "Claims API",
-    details: "API & VIN-based pricing ($20–30 per claim)",
-    arrRange: "$500K ARR",
-    color: "#F2D2BD",
-    revenueTypes: ["Per-Scan / API Fees"],
+    coreValue: 0,
+    premiumValue: 2500000,
+    consultancyValue: 1500000,
+    phase: "2.5",
+    name: "Atlas Vision Suite - VPC warehouse",
+    priceRange: "Custom . Multi-site Monthly",
+    pricingNote: "",
+    tagline: "Scaled deployment tailored to supply chain operations",
+    highlights: [
+      "Autonomy and edge deployment options",
+      "Advanced governance and data management",
+      "Enterprise transformation with priority SLA",
+    ],
+    color: "#F2B8C1",
   },
-  // Replace ONLY these entries in revenueData:
-
-{
-  month: 15,
-  baseArr: 1000000,
-  diArr: 150000, // DVP micro-pricing (green)
-  phase: "2.5",
-  name: "VPC Fast-Lane",
-  details: "OEM pilot suite with site subscription ($1–2K/site/month)", // <- removed DVP mention
-  arrRange: "$750K–$1M ARR",
-  color: "#C1E1C1",
-  revenueTypes: ["SaaS Subscriptions"] // <- removed "Digital Vehicle Passports"
-},
-{
-  month: 18,
-  baseArr: 2200000, // includes Governance Tier (operational SaaS)
-  diArr: 400000,    // DVP analytics growth (green)
-  phase: "3",
-  name: "Pro Suite + Governance Tier",
-  details: "Per-vehicle & lease bundle +\ngovernance/compliance analytics add-on ($100/site/month)",
-  arrRange: "$1.5–2M ARR (base)",
-  color: "#FDFD96",
-  revenueTypes: [
-    "SaaS Subscriptions",
-    "Per-Scan / API Fees",
-    "Governance Tier"          // <- removed "Digital Vehicle Passports"
-  ]
-},
-{
-  month: 24,
-  baseArr: 3000000,  // operational ARR (autonomy lease + SaaS) — purple
-  diArr: 2500000,    // data intelligence (DVP + insights) — green
-  phase: "4+",
-  name: "Operational ARR (Phase 4)",
-  details: "Autonomy bundle: hardware lease + SaaS (drones + ground robots)",
-  arrRange: "$3.0M Base ARR",
-  color: "#FFB347",
-  revenueTypes: ["SaaS Subscriptions", "Hardware Lease"] // <- no DVP here
-},
+  {
+    month: 24,
+    coreValue: 0,
+    premiumValue: 4500000,
+    consultancyValue: 3500000,
+    phase: "3",
+    name: "Atlas Ground Vision Suite - VPC warehouse",
+    priceRange: "Custom · Structured annually . ownership options",
+    pricingNote: "Bundle options with edge ground-robot hardware lease",
+    tagline: "Horizontal scale up with semi-autonomous hardware",
+    highlights: [
+      "Autonomy with ground-robot integration",
+      "Workflow orchestration and data integrations",
+      "Dedicated transofrmation team",
+    ],
+    color: "#C1E1C1",
+  },
+  // {
+  //   month: 24,
+  //   coreValue: 0,
+  //   premiumValue: 5000000,
+  //   consultancyValue: 5000000,
+  //   phase: "4",
+  //   name: "Atlas Aerial Agent Suite - Enterprise",
+  //   priceRange: "Custom · Structured annually . Ownership options",
+  //   pricingNote: "",
+  //   tagline: "Full platform: analytics, compliance & fleet insights",
+  //   highlights: [
+  //     "Fleet-wide analytics dashboard",
+  //     "Compliance & audit reporting",
+  //     "Enterprise new ways of working",
+  //   ],
+  //   color: "#FDFD96",
+  // },
+  
 ];
 
-// Phase 4 operational callout (purple box, within base ARR)
-
-// Three DVP (green) data-product milestones
-
-// ---------- 2) Helpers ----------
-
-// Tooltip (hover) shows Phase box with ARR, details, and Revenue Streams (consistent)
-const CustomCallout = ({ active, payload }: any) => {
-  if (active && payload && payload.length) {
-    const data = payload[0].payload;
-
-    // Responsive sizing for mobile
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-    const isTablet = typeof window !== 'undefined' && window.innerWidth >= 640 && window.innerWidth < 1024;
-
-    const calloutStyle: React.CSSProperties = {
-      backgroundColor: 'rgba(255,255,255,0.95)',
-      border: `2px solid ${data.color || '#ccc'}`,
-      padding: isMobile ? '8px' : isTablet ? '10px' : '15px',
-      borderRadius: isMobile ? '8px' : '12px',
-      boxShadow: '0 5px 15px rgba(0,0,0,0.1)',
-      minWidth: isMobile ? '200px' : isTablet ? '230px' : '260px',
-      maxWidth: isMobile ? '280px' : isTablet ? '320px' : '400px',
-      fontSize: isMobile ? '11px' : isTablet ? '12px' : '14px',
-      lineHeight: '1.5',
-    };
-
-    const headerStyle: React.CSSProperties = {
-      margin: '0 0 8px 0',
-      paddingBottom: isMobile ? '4px' : '8px',
-      borderBottom: `2px solid ${data.color}`,
-      color: '#333',
-      fontWeight: 600,
-      fontSize: isMobile ? '12px' : isTablet ? '13px' : '14px',
-    };
-
-    const detailText: React.CSSProperties = { 
-      margin: isMobile ? '3px 0' : '5px 0', 
-      color: '#555',
-      fontSize: isMobile ? '10px' : isTablet ? '11px' : '13px',
-    };
-
-    return (
-      <div style={calloutStyle}>
-        <h4 style={headerStyle}>Phase {data.phase}: {data.name}</h4>
-        <p style={detailText}><strong>ARR:</strong> {data.arrRange}</p>
-        <p style={detailText}><strong>Details:</strong> {data.details}</p>
-        {data.revenueTypes && (
-          <>
-            <p style={{ ...detailText, marginTop: isMobile ? '6px' : '10px' }}><strong>Revenue Streams:</strong></p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: isMobile ? '4px' : '8px', marginTop: isMobile ? '4px' : '6px' }}>
-              {data.revenueTypes.map((type: string, idx: number) => {
-                // Compute a brighter tint for the box
-                const base = data.color || '#eee';
-                // Simple tint: mix with white
-                function tint(hex: string, percent: number) {
-                  hex = hex.replace('#', '');
-                  const r = Math.min(255, Math.round(parseInt(hex.slice(0,2),16) + (255-parseInt(hex.slice(0,2),16))*percent));
-                  const g = Math.min(255, Math.round(parseInt(hex.slice(2,4),16) + (255-parseInt(hex.slice(2,4),16))*percent));
-                  const b = Math.min(255, Math.round(parseInt(hex.slice(4,6),16) + (255-parseInt(hex.slice(4,6),16))*percent));
-                  return `rgb(${r},${g},${b})`;
-                }
-                const boxColor = tint(base, 0.55);
-                return (
-                  <span
-                    key={idx}
-                    style={{
-                      background: boxColor,
-                      borderRadius: isMobile ? '5px' : '7px',
-                      padding: isMobile ? '3px 8px' : isTablet ? '4px 10px' : '5px 12px',
-                      fontWeight: 500,
-                      fontSize: isMobile ? '10px' : isTablet ? '11px' : '13px',
-                      color: '#222',
-                      border: `1.5px solid ${base}`,
-                      boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
-                      marginBottom: '2px',
-                      display: 'inline-block',
-                    }}
-                  >
-                    {type}
-                  </span>
-                );
-              })}
-            </div>
-          </>
-        )}
-  {/* Embed DVP V0 info box in Phase 2.5 callout */}
-  {data.phase === "2.5" && (
-    <div style={{
-      background: '#d6f5e3',
-      borderRadius: isMobile ? '6px' : '10px',
-      padding: isMobile ? '8px 10px' : isTablet ? '10px 12px' : '12px 16px',
-      marginTop: isMobile ? '10px' : '18px',
-      color: '#222',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
-      fontSize: isMobile ? '10px' : isTablet ? '11px' : '13px',
-      fontWeight: 500,
-      lineHeight: 1.5
-    }}>
-      <div style={{ fontWeight: 900, fontSize: isMobile ? '11px' : isTablet ? '13px' : '16px', marginBottom: isMobile ? '3px' : '6px', letterSpacing: '0.3px', textTransform: 'uppercase' }}>DVP - Data Intelligence V0 </div>
-      <div style={{ fontWeight: 900, fontSize: isMobile ? '11px' : isTablet ? '12px' : '15px', color: '#155724', marginBottom: isMobile ? '2px' : '4px', letterSpacing: '0.2px' }}><strong>+ $150K</strong></div>
-      <div style={{ whiteSpace: 'pre-line', marginBottom: isMobile ? '2px' : '4px', fontSize: isMobile ? '9px' : isTablet ? '10px' : '12px' }}>
-        Micro-pricing starts via VPC pilots
-        VIN-linked reports & exports
-      </div>
-    </div>
-  )}
-
-  {/* Embed DVP V1 info box in Phase 3 callout */}
-  {data.phase === "3" && (
-    <div style={{
-      background: '#d6f5e3',
-      borderRadius: isMobile ? '6px' : '10px',
-      padding: isMobile ? '8px 10px' : isTablet ? '10px 12px' : '12px 16px',
-      marginTop: isMobile ? '10px' : '18px',
-      color: '#222',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
-      fontSize: isMobile ? '10px' : isTablet ? '11px' : '13px',
-      fontWeight: 500,
-      lineHeight: 1.5
-    }}>
-      <div style={{ fontWeight: 900, fontSize: isMobile ? '11px' : isTablet ? '13px' : '16px', marginBottom: isMobile ? '3px' : '6px', letterSpacing: '0.3px', textTransform: 'uppercase' }}>DVP - Data Intelligence V1 </div>
-      <div style={{ fontWeight: 900, fontSize: isMobile ? '11px' : isTablet ? '12px' : '15px', color: '#155724', marginBottom: isMobile ? '2px' : '4px', letterSpacing: '0.2px' }}><strong>+ $400K</strong></div>
-      <div style={{ whiteSpace: 'pre-line', marginBottom: isMobile ? '2px' : '4px', fontSize: isMobile ? '9px' : isTablet ? '10px' : '12px' }}>
-        Governance analytics + supplier trends
-        Pro Suite data monetization
-      </div>
-    </div>
-  )}
-
-    {/* Embed DVP V2 info box in Phase 4+ callout */}
-    {data.phase === "4+" && (
-      <div style={{
-        background: '#d6f5e3',
-        borderRadius: isMobile ? '6px' : '10px',
-        padding: isMobile ? '8px 10px' : isTablet ? '10px 12px' : '12px 16px',
-        marginTop: isMobile ? '10px' : '18px',
-        color: '#222',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
-        fontSize: isMobile ? '10px' : isTablet ? '11px' : '13px',
-        fontWeight: 500,
-        lineHeight: 1.5
-      }}>
-        <div style={{ fontWeight: 900, fontSize: isMobile ? '11px' : isTablet ? '13px' : '16px', marginBottom: isMobile ? '3px' : '6px', letterSpacing: '0.3px', textTransform: 'uppercase' }}>DVP - Data Intelligence V2 </div>
-        <div style={{ fontWeight: 900, fontSize: isMobile ? '11px' : isTablet ? '12px' : '15px', color: '#155724', marginBottom: isMobile ? '2px' : '4px', letterSpacing: '0.2px' }}><strong>+ $2.5M</strong></div>
-        <div style={{ whiteSpace: 'pre-line', marginBottom: isMobile ? '2px' : '4px', fontSize: isMobile ? '9px' : isTablet ? '10px' : '12px' }}>
-          Fleet-wide DVP & insights licensing
-          Autonomy data streams included
-        </div>
-      </div>
-    )}
-      </div>
-    );
-  }
-  return null;
+// ── Y-axis formatter ───────────────────────────────────────────────────────────
+const formatY = (v: number) => {
+  if (v >= 1_000_000) return `$${(v / 1_000_000).toFixed(1)}M`;
+  if (v >= 1_000) return `$${(v / 1_000).toFixed(0)}K`;
+  return `$${v}`;
 };
 
-// ---------- 3) Chart ----------
+// ── Tooltip (overview only) ────────────────────────────────────────────────────
+const PricingCallout = ({ active, payload }: any) => {
+  if (!active || !payload?.length) return null;
+  const d = payload[0].payload;
+  if (!d.phase) return null;
 
-export const RevenueModelChart: React.FC = () => {
-  // Responsive font sizing based on viewport width with resize listener
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const isTablet = typeof window !== 'undefined' && window.innerWidth >= 640 && window.innerWidth < 1024;
+  const fs   = isMobile ? 11 : isTablet ? 12 : 13;
+  const tffs = isMobile ? 13 : isTablet ? 14 : 16;
+  const pfs  = isMobile ? 16 : isTablet ? 18 : 21;
+  const pad  = isMobile ? '10px 12px' : isTablet ? '12px 16px' : '16px 20px';
+
+  // yellow text is unreadable on white — darken it
+  const checkColor = d.color === '#FDFD96' ? '#a09600' : d.color;
+
+  return (
+    <div style={{
+      background: 'rgba(255,255,255,0.97)',
+      border: `2px solid ${d.color}`,
+      borderRadius: 12,
+      padding: pad,
+      boxShadow: '0 6px 20px rgba(0,0,0,0.12)',
+      minWidth: isMobile ? 210 : 260,
+      maxWidth: isMobile ? 280 : 340,
+      fontSize: fs,
+      lineHeight: 1.55,
+    }}>
+      {/* Header */}
+      <div style={{ borderBottom: `2px solid ${d.color}`, paddingBottom: 8, marginBottom: 10 }}>
+        {/* <div style={{ fontSize: fs - 1, color: '#999', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: 2 }}>
+          Package {d.phase}
+        </div> */}
+        <div style={{ fontSize: tffs, fontWeight: 800, color: '#1a1a2e' }}>{d.name}</div>
+        <div style={{ fontSize: fs - 1, color: '#666', marginTop: 3, fontStyle: 'italic' }}>{d.tagline}</div>
+      </div>
+
+      {/* Price highlight */}
+      <div style={{ margin: '8px 0', background: `${d.color}55`, borderRadius: 8, padding: '8px 12px' }}>
+        <div style={{ fontSize: fs - 2, color: '#666', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 2 }}>
+          Indicative Price
+        </div>
+        <div style={{ fontSize: pfs, fontWeight: 800, color: '#1a1a2e' }}>{d.priceRange}</div>
+        <div style={{ fontSize: fs - 2, color: '#888', marginTop: 3 }}>{d.pricingNote}</div>
+      </div>
+
+      {/* Highlights */}
+      <div style={{ marginTop: 10 }}>
+        <div style={{ fontSize: fs - 2, fontWeight: 700, color: '#888', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 6 }}>
+          What's Included
+        </div>
+        {d.highlights.map((h: string, i: number) => (
+          <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: 7, marginBottom: 5 }}>
+            <span style={{ color: checkColor, fontWeight: 800, fontSize: fs + 1, lineHeight: 1.3, flexShrink: 0 }}>✓</span>
+            <span style={{ color: '#333', fontSize: fs }}>{h}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// ── Chart ─────────────────────────────────────────────────────────────────────
+export const PricingModelChart: React.FC = () => {
   const [windowWidth, setWindowWidth] = React.useState(
     typeof window !== 'undefined' ? window.innerWidth : 1024
   );
-
   React.useEffect(() => {
     if (typeof window === 'undefined') return;
-
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    const handle = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handle);
+    return () => window.removeEventListener('resize', handle);
   }, []);
 
   const isMobile = windowWidth < 640;
   const isTablet = windowWidth >= 640 && windowWidth < 1024;
-  
-  const tickFontSize = isMobile ? 9 : isTablet ? 10 : 12;
-  const labelFontSize = isMobile ? 11 : isTablet ? 12 : 14;
-  const phaseLabelFontSize = isMobile ? 10 : isTablet ? 11 : 12;
-  const dotRadius = isMobile ? 6 : isTablet ? 7 : 8;
-  const minChartHeight = isMobile ? 280 : isTablet ? 320 : 360;
+  const tickFs  = isMobile ? 9  : isTablet ? 10 : 11;
+  const labelFs = isMobile ? 10 : isTablet ? 11 : 13;
+  const dotR    = isMobile ? 5  : isTablet ? 6  : 8;
+  const minH    = isMobile ? 300 : isTablet ? 350 : 390;
 
   return (
-  <div style={{ width: '100%', height: '100%', minHeight: minChartHeight }}>
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart data={revenueData} margin={{ top: 70, right: 30, left: 30, bottom: 25 }}>
-          <defs>
-            <linearGradient id="colorBase" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="75%" stopColor="rgb(var(--pale-peach))" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="rgb(var(--pale-peach))" stopOpacity={0} />
-            </linearGradient>
-            <linearGradient id="colorDI" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="65%" stopColor='rgb(var(--soft-mint-green))' stopOpacity={0.8} />
-              <stop offset="95%" stopColor='rgb(var(--soft-mint-green))' stopOpacity={0} />
-            </linearGradient>
-          </defs>
+    <div style={{ width: '100%', fontFamily: 'sans-serif' }}>
 
-          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+      {/* ── Title block ──
+      <div style={{ textAlign: 'center', marginBottom: 14, padding: '0 12px' }}>
+        <div style={{
+          fontSize: isMobile ? 16 : isTablet ? 19 : 23,
+          fontWeight: 800,
+          color: '#1a1a2e',
+          letterSpacing: '-0.4px',
+        }}>
+          Partnership Pricing Overview
+        </div>
+        <div style={{
+          fontSize: isMobile ? 10 : isTablet ? 11 : 13,
+          color: '#888',
+          marginTop: 5,
+          fontStyle: 'italic',
+        }}>
+          Flexible, scalable packages built around your needs
+          &nbsp;·&nbsp; All pricing indicative &amp; open for discussion
+        </div>
+      </div> */}
 
-          <XAxis
-            dataKey="month"
-            tick={{ fontSize: tickFontSize }}
-            label={{ value: 'Development Timeline (Months)', position: 'insideBottom', offset: -15, fontSize: labelFontSize, fontWeight: 'bold' }}
-            domain={[0, 30]}
-            ticks={[0, 6, 12, 15, 18, 24, 30]}
-          />
+      {/* ── Legend ── */}
+      <div style={{ display: 'flex', justifyContent: 'center', gap: isMobile ? 16 : 28, marginBottom: 10, flexWrap: 'wrap' }}>
+        {[
+          { color: '#6B4C9A', label: 'Bridging & Redesign' },
+          // { color: '#d76374', label: 'Core Packages' },
+          { color: '#82ca9d', label: 'Technology' },
+        ].map(({ color, label }) => (
+          <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: isMobile ? 10 : 12, color: '#555', fontWeight: 600 }}>
+            <div style={{ width: 12, height: 12, borderRadius: 3, background: color }} />
+            {label}
+          </div>
+        ))}
+      </div>
 
-          <YAxis
-            tick={{ fontSize: tickFontSize }}
-            label={{ value: 'ARR ($)', angle: -90, position: 'insideLeft', offset: -25, fontSize: labelFontSize, fontWeight: 'bold' }}
-            domain={[0, 6000000]}
-          />
+      {/* ── Area Chart ── */}
+      <div style={{ width: '100%', height: minH }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart data={pricingData} margin={{ top: 55, right: 30, left: 30, bottom: 28 }}>
+            <defs>
+              <linearGradient id="gradConsultancy" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="70%" stopColor="#9B7FBF" stopOpacity={0.85} />
+                <stop offset="95%" stopColor="#9B7FBF" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="gradCore" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="70%" stopColor="#f2b8be" stopOpacity={0.85} />
+                <stop offset="95%" stopColor="#f2b8be" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="gradPremium" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="65%" stopColor="#a8e6bf" stopOpacity={0.85} />
+                <stop offset="95%" stopColor="#a8e6bf" stopOpacity={0} />
+              </linearGradient>
+            </defs>
 
-          <Tooltip content={<CustomCallout />} cursor={{ stroke: 'rgba(0,0,0,0.08)', strokeWidth: 2, strokeDasharray: '3 3' }} />
+            <CartesianGrid strokeDasharray="3 3" vertical={false} />
 
-          {/* Areas */}
-          <Area type="monotone" dataKey="baseArr" stackId="1" stroke="#d76374ff" fill="url(#colorBase)" animationDuration={1200} />
-          <Area type="monotone" dataKey="diArr" stackId="1" stroke="#82ca9d" fill="url(#colorDI)" animationDuration={1200} animationBegin={300} />
+            <XAxis
+              type="number"
+              dataKey="month"
+              tick={{ fontSize: tickFs }}
+              label={{
+                value: 'Implementation Journey (Months)',
+                position: 'insideBottom',
+                offset: -16,
+                fontSize: labelFs,
+                fontWeight: 'bold',
+              }}
+              domain={[0, 24]}
+              ticks={[0, 2, 6, 12, 24]}
+              allowDecimals={false}
+            />
 
-          {/* Phase markers */}
-          {revenueData.filter((p: any) => p.month > 0).map((entry: any) => (
-            <ReferenceDot key={`dot-${entry.month}`} x={entry.month} y={entry.baseArr + entry.diArr} r={dotRadius} fill={entry.color} stroke="white" strokeWidth={2}>
-              <Label value={`Phase ${entry.phase}`} position="top" offset={15} fontSize={phaseLabelFontSize} fontWeight="bold" fill="#666" />
-            </ReferenceDot>
-          ))}
+            <YAxis
+              tickFormatter={formatY}
+              tick={{ fontSize: tickFs }}
+              label={{
+                value: 'Platform Value Scale',
+                angle: -90,
+                position: 'insideLeft',
+                offset: -18,
+                fontSize: labelFs,
+                fontWeight: 'bold',
+              }}
+              domain={[0, 6_000_000]}
+            />
 
+            <Tooltip
+              content={<PricingCallout />}
+              cursor={{ stroke: 'rgba(0,0,0,0.07)', strokeWidth: 2, strokeDasharray: '3 3' }}
+            />
 
-          {/* DVP milestone boxes removed; DVP V0 now only appears embedded in phase 2 callout */}
-        </AreaChart>
-      </ResponsiveContainer>
+            <Area
+              type="monotone"
+              dataKey="consultancyValue"
+              stackId="1"
+              stroke="#6B4C9A"
+              fill="url(#gradConsultancy)"
+              animationDuration={1200}
+            />
+            {/* <Area
+              type="monotone"
+              dataKey="coreValue"
+              stackId="1"
+              stroke="#d76374"
+              fill="url(#gradCore)"
+              animationDuration={1200}
+              animationBegin={100}
+            /> */}
+            <Area
+              type="monotone"
+              dataKey="premiumValue"
+              stackId="1"
+              stroke="#82ca9d"
+              fill="url(#gradPremium)"
+              animationDuration={1200}
+              animationBegin={300}
+            />
+
+            {/* Package milestone dots */}
+            {pricingData
+              .filter((p: any) => p.month > 0)
+              .map((entry: any) => (
+                <ReferenceDot
+                  key={`dot-${entry.month}`}
+                  x={entry.month}
+                  y={entry.consultancyValue + entry.coreValue + entry.premiumValue}
+                  r={dotR}
+                  fill={entry.color}
+                  stroke="white"
+                  strokeWidth={2}
+                >
+                  <Label
+                    value={entry.name}
+                    position="top"
+                    offset={14}
+                    fontSize={isMobile ? 9 : isTablet ? 10 : 11}
+                    fontWeight="bold"
+                    fill="#555"
+                  />
+                </ReferenceDot>
+              ))}
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* ── Footer note ── */}
+      <div style={{
+        textAlign: 'center',
+        marginTop: 10,
+        fontSize: isMobile ? 9 : 11,
+        color: '#bbb',
+        padding: '0 16px',
+      }}>
+        Hover each milestone to explore package details · Prices are indicative ranges, subject to scope &amp; volume
+      </div>
     </div>
   );
 };
 
-export default RevenueModelChart;
+export default PricingModelChart;

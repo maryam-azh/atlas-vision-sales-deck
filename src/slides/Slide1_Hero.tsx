@@ -59,7 +59,7 @@ export default function Slide1_Hero() {
               OUR MISSION
             </h2>
             <p className="text-base sm:text-lg lg:text-xl font-body leading-relaxed mb-6">
-              To revolutionize quality control with edge-first AI inspection technology
+              To revolutionize quality control with AI inspection technology
             </p>
             <div className="mt-4 p-4 sm:p-6 bg-black text-white rounded-xl">
               <p className=" leading-relaxed text-base sm:text-lg lg:text-xl">

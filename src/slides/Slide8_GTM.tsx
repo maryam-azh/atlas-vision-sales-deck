@@ -60,7 +60,7 @@ export default function Slide8_GTM() {
       cardBg: "rgb(var(--bright-peach))",
       title: "Scale autonomy & multi-agent ops",
       market: "Fleet logistics & OEM storage yards",
-      goal: "Fleet-level inspections with drones + ground agents",
+      goal: "Fleet-level inspections  ground agents",
       outcomes: ["Multi-OEM deployments across APAC", "Partnership with global logistics operator"]
     }
   ];
@@ -140,7 +140,7 @@ export default function Slide8_GTM() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
                         <div className="flex flex-col p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:bg-white/10 transition-all duration-300">
               <h4 className="text-sm sm:text-base font-black uppercase mb-1.5">Technology Partners</h4>
-              <p className="text-xs sm:text-sm text-white leading-relaxed border-t border-white/10 pt-2">Drone, LiDAR, Robotics</p>
+              <p className="text-xs sm:text-sm text-white leading-relaxed border-t border-white/10 pt-2">LiDAR, Robotics</p>
             </div>
             <div className="flex flex-col p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:bg-white/10 transition-all duration-300">
               <h4 className="text-sm sm:text-base font-black uppercase mb-1.5">Integration Partners</h4>

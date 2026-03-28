@@ -74,7 +74,7 @@ Action
 Powered By
 Output / Value
 1. Capture
-Vehicles are scanned automatically using mobile devices, fixed rigs, or drones.
+Vehicles are scanned automatically using mobile devices, fixed rigs, or mobile robotic rigs.
 Atlas Vision Lite, VPC Suite, Aero Vision
 High-resolution RGB / LiDAR / thermal feeds tagged by VIN
 2. Detect
@@ -101,7 +101,7 @@ Q1–Q2 2026: MVP live → Used/Rental market traction
 Q3 2026: Insurance pilots + VPC Fast-Lane kick-off
 Q4 2026: Insurance ARR ≈ S$ 500 k VPC ROI validated
 Q1–Q2 2027: Atlas Vision Pro Suite GA OEM contracts signed
-Q3–Q4 2027: Drone inspection pilot Series A+ scale-up
+Q3–Q4 2027: Autonomous inspection pilot Series A+ scale-up
 Module
 Function
 Roadmap phase
@@ -118,7 +118,7 @@ Atlas Vision Pro Suite
 Full-vehicle PDI automation for OEMs and dealerships
 Phase 3 (Q1–Q2 2027)
 Atlas Aero Vision
-Drone-based outdoor inspection (Phase 4)
+Autonomous outdoor inspection (Phase 4)
 Phase 4 (Q3–Q4 2027)
 Atlas Governance & Analytics Module
 Compliance, explainability, and continuous performance monitoring
@@ -184,16 +184,16 @@ Ribbon — VPC Fast-Lane (Q3 2026 → Q2 2027)
 
 Enterprise Scale & Autonomous Growth (Q1–Q4 2027)
 How: business impact
-Visual Layout:Stacked roadmap: Phase 3 (top half) → Phase 4 (bottom half).Include icons for “OEM ERP Integration” and “Autonomous Drone Fleet”.
+Visual Layout:Stacked roadmap: Phase 3 (top half) → Phase 4 (bottom half).Include icons for “OEM ERP Integration” and “Autonomous Mobile Fleet”.
 Right Column — Phase 4 (Autonomous & Scaling)
 Market Focus: Fleet logistics & outdoor OEM yards
 Goal: Achieve full automation and federated scalability
 Execution Highlights:
-Launch Atlas Aero Vision (drone inspection module)
-Multi-agent autonomy: drone + ground + cloud coordination
+Launch Atlas Aero Vision (autonomous inspection module)
+Multi-agent autonomy: mobile + ground + cloud coordination
 Federated learning for OEM-specific model fine-tuning
 Revenue Model: Hardware lease + SaaS bundle
-Per-drone subscription + analytics license
+Per-unit subscription + analytics license
 Outcomes:
 ≥ 97 % accuracy outdoors
 ARR ≥ US $ 3 M
@@ -292,7 +292,7 @@ Revenue Model
 Subscription (per yard/month) or pay-per-inspection (~S$ 2 / scan).
 API usage-based (per claim) + enterprise licensing for insurers and repair networks.
 Tech Constraints
-Works best outdoors or well-lit indoors; no drone/autonomous mode yet; relies on YOLO + VLM pipeline.
+Works best outdoors or well-lit indoors; no advanced autonomous mode yet; relies on YOLO + VLM pipeline.
 Lighting variance, smartphone camera quality differences; need robust VLM grounding for unseen defect types.
 Execution Goals
 • Pilot 2–3 rental fleets / used-car dealers in SG & MY.• Build labeled dataset > 10 k defects.• Target 80 % recall on major surface defects.• Deliver 5 min average inspection time.
@@ -312,19 +312,19 @@ Manual PDIs miss subtle paint defects or misalignments; inconsistent dealer repo
 Large outdoor storage yards are costly to inspect manually; inconsistent photo documentation.
 Atlas Vision Value Prop
 OEM-grade automated inspection with digital vehicle passport and defect trend analytics; integration into ERP/PDI systems.
-Drone-based autonomous scanning with multimodal VLM; real-time heatmap of defects for hundreds of cars per hour.
+Autonomous autonomous scanning with multimodal VLM; real-time heatmap of defects for hundreds of cars per hour.
 Product Offering
 Atlas Vision Pro Suite — multi-agent inspection orchestration (edge agent + cloud + dashboard).
-Atlas Aero Vision Module — drone + multi-agent coordination (edge + cloud).
+Atlas Aero Vision Module — multi-agent coordination (edge + cloud).
 Revenue Model
 Annual enterprise subscription + per-vehicle inspection license.
 Hardware + Software bundle (leasing or revenue share).
 Tech Constraints
 Requires adaptive HDR lighting for indoor/outdoor variability; high accuracy (>95 %) for production acceptance; heavy OEM compliance cycles.
-Drone regulatory approval, GNSS / lighting interference, data bandwidth.
+Autonomy regulatory approval, GNSS / lighting interference, data bandwidth.
 Execution Goals
 • Deploy adaptive lighting module (as per arXiv 2508.01965).• Train multi-sensor VLM (RGB + LiDAR + thermal).• Pilot with 1 OEM & 1 Tier-1 supplier.• Integrate with OEM Digital Twin API.
-• Integrate drone perception module.• Demonstrate 3 min per car inspection outdoors.• Multi-agent fault isolation & automatic report upload.• Certification alignment (ISO 42001, NIST RMF).
+• Integrate autonomy perception module.• Demonstrate 3 min per car inspection outdoors.• Multi-agent fault isolation & automatic report upload.• Certification alignment (ISO 42001, NIST RMF).
 Expected Outcomes
 First OEM contract; Series A raise; ARR > S$ 1.5 M.
 Global scalability; OEM and insurance cross-sector adoption; ARR > S$ 3 M.
@@ -332,14 +332,14 @@ Phase 3 — OEM & New-Vehicle PDI (12–18 months)
 Market focus: Manufacturers, Logistics Yards, Dealership PDIsTech readiness level: TRL 7–8 (adaptive lighting, edge-cloud orchestration, partial autonomy)
 
 Phase 4 — Scale & Autonomy (18-24 months)
-Market focus: Fleet Logistics & Outdoor OEM YardsTech readiness level: TRL 8–9 (drone inspection + multimodal autonomy)
+Market focus: Fleet Logistics & Outdoor OEM YardsTech readiness level: TRL 8–9 (autonomous inspection + multimodal autonomy)
 How: Roadmap details: 12-24 backup slide only
 
 
 OUTDATED
 
 Product Roadmap — “Atlas Vision PDI Platform”
-Goal: Deliver an end-to-end AI-native inspection workflow that automates PDI at dealerships and OEM yards, scaling later to autonomous, drone-enabled inspection systems.
+Goal: Deliver an end-to-end AI-native inspection workflow that automates PDI at dealerships and OEM yards, scaling later to autonomous, autonomous inspection systems.
 Phase
 Horizon
 Goal
@@ -363,13 +363,13 @@ Launch SaaS inspection platform
 Phase 4 — Autonomous Inspection (18–24 mo)
 Series A+
 Enable hands-free scanning in dynamic environments
-• Drone-based outdoor inspection (ref. arXiv 2508.01965) • Adaptive lighting modules for sunlight and indoor conditions • Multi-agent coordination (vehicle + drone + edge node) • Integration with OEM digital twins
+• Autonomous outdoor inspection (ref. arXiv 2508.01965) • Adaptive lighting modules for sunlight and indoor conditions • Multi-agent coordination (vehicle + mobile + edge node) • Integration with OEM digital twins
 – Full-vehicle coverage < 3 min – 98 % coverage rate – Commercial deployment with fleet partner
 How- backup slide only remove unnecessary details 
 Do not include KPI’s
 
 Technology Roadmap — “Atlas Vision Agentic VLM Architecture”
-Goal: Focus: Build the multimodal AI core that scales from iPhone edge inference to autonomous, lighting-adaptive, drone-based inspection.
+Goal: Focus: Build the multimodal AI core that scales from iPhone edge inference to autonomous, lighting-adaptive, autonomous inspection.
 Layer
 Short Term (6 mo)
 Mid Term (12 mo)
@@ -381,11 +381,11 @@ Perception Models
 Sensor & Hardware Stack
 • RGB cameras (4K @ 30 fps) on tripod or hand-held • ARKit/LiDAR mesh for depth map alignment
 • Multi-sensor rig with stereo vision + polarized lighting • Thermal/IR module for paint or surface temperature defects
-• Advanced lighting sensing (per arXiv 2508.01965) – HDR fusion, adaptive exposure • Drone-mounted sensor suite for outdoor scans
+• Advanced lighting sensing (per arXiv 2508.01965) – HDR fusion, adaptive exposure • Mobile sensor suite for outdoor scans
 Agentic Architecture
 • Single agent pipeline (edge → cloud fallback) • Prompt-based VLM reasoning for classification & severity
 • Multi-agent coordination (vision agent + report agent + feedback agent) • Memory store for contextual inspection history
-• Autonomous multi-agent fleet coordination (drones + ground robots) • Runtime policy manager for safety and ISO 42001 compliance
+• Autonomous multi-agent fleet coordination (mobile + ground robots) • Runtime policy manager for safety and ISO 42001 compliance
 Infrastructure & Data
 • Local data lake for PDI images/videos • Basic dashboard + annotation tool in Streamlit or Next.js
 • Cloud data hub (AWS S3 + SageMaker + QuickSight) • Active-learning loop for dataset refresh • Model evaluation dashboard
@@ -423,7 +423,7 @@ Edge Convenience, Cloud Power: Seamless fallback between on-device inference and
 Continuous Learning: Technician feedback closes the RLHF loop.
 
 
-Scalable Sensors: Ready for adaptive lighting & drone integration.
+Scalable Sensors: Ready for adaptive lighting & advanced autonomy integration.
 
 
 Explainable AI: Every defect comes with human-readable rationale.
@@ -463,9 +463,9 @@ OEM & Dealership Networks (incl. VPC sites)
 Phase 4 — Autonomous Inspection & Scaling
 Q3 – Q4 2027
 Fleet Logistics & Outdoor OEM Yards
-• Pilot Atlas Aero Vision (drone inspection)• Enable multi-agent autonomy (drone + ground + cloud)• Federated learning for OEM-specific models
+• Pilot Atlas Aero Vision (autonomous inspection)• Enable multi-agent autonomy (mobile + ground + cloud)• Federated learning for OEM-specific models
 • Multi-sensor fusion (RGB + thermal + LiDAR)• Agentic fleet coordination runtime• Federated training prototype
-• 97 % accuracy • ≤ 3 min per vehicle • S$ 3 M ARR • Series A+ raise • Drone certification progress
+• 97 % accuracy • ≤ 3 min per vehicle • S$ 3 M ARR • Series A+ raise • Autonomy certification progress
 How: Roadmap details
 Backup only
 
@@ -531,12 +531,12 @@ OEM compliance officers
 Llama Guard 4 integration; audit DB + Explainable AI summaries
 12. Atlas Aero Vision Module
 Phase 4 – Q3 2027
-Drone-based autonomous inspection for outdoor OEM yards and logistics depots.
+Autonomous autonomous inspection for outdoor OEM yards and logistics depots.
 Fleet operators, logistics QA teams
-Multi-sensor fusion (RGB, thermal, LiDAR); drone autonomy stack
+Multi-sensor fusion (RGB, thermal, LiDAR); autonomy stack
 13. Multi-Agent Coordination Runtime
 Phase 4 – Q4 2027
-Orchestrates collaboration between edge, cloud, and drone agents for distributed inspection and reporting.
+Orchestrates collaboration between edge, cloud, and mobile agents for distributed inspection and reporting.
 OEM fleet IT / Atlas Ops team
 Agentic workflow engine (CoreML + Ray/Redis backend)
 14. Federated Learning Hub
@@ -571,7 +571,7 @@ Federated learning setup (Phase 4) + OEM data governance contracts
 Edge Compute Limits (iPhone / iPad)
 Latency & thermal constraints
 Use compressed VLMs (3B SmolVLM) + cloud fallback orchestration
-Drone Regulation (future)
+Autonomy Regulation (future)
 Deployment delays outdoors
 Early trials on private yards; pre-certification under CAAS/FAA equivalents
 

@@ -79,7 +79,7 @@ We combine computer vision, AI, and mobile technology to deliver fast, accurate,
 #### breakdown
 | **Stage** | **Action** | **Output / Value** |
 |------------|-------------|--------------------|
-| **1. Capture** | Vehicles are scanned automatically using mobile devices, fixed rigs, or drones. | High-quality visual and sensor data tagged to each VIN. |
+| **1. Capture** | Vehicles are scanned automatically using mobile devices, fixed rigs, or mobile robotic rigs. | High-quality visual and sensor data tagged to each VIN. |
 | **2. Detect** | AI identifies scratches, dents, misalignments, and missing parts in real time. | Instant defect localization with accuracy above 95 %. |
 | **3. Reason** | AI classifies defect severity and recommends corrective actions. | Clear defect summary with actionable next steps. |
 | **4. Verify & Learn** | Technicians review flagged cases; feedback improves accuracy. | Human-AI collaboration loop that builds trust and precision. |
@@ -115,7 +115,7 @@ Horizontal flow: **Capture → Detect → Reason → Verify & Learn → Report &
 | **1. Foundation (0–6 mo)** | **Atlas Vision Lite** | Validate edge inspection performance and data pipeline. | Used-car dealers & rental fleets. | MVP live; ≥80 % defect recall; 3 fleet pilots completed. |
 | **2. Expansion (6–12 mo)** | **Claim Vision API** | Automate claim verification and reduce assessment time. | Insurers & repair networks. | 2 insurer integrations; validated ROI; ARR ≈ US $500 K. |
 | **3. Enterprise (12–18 mo)** | **Atlas Vision Pro + Digital Vehicle Passport (DVP)** | Launch full SaaS suite and VIN-linked quality records. | OEMs & dealership networks. | OEM ERP integration; ≤3 min inspections; ARR ≈ US $1.5 M. |
-| **4. Autonomy (18–24 mo)** | **Aero Vision / Ground Robotics** | Enable autonomous inspections with drones and mobile robots. | Fleet logistics & OEM yards. | Multi-OEM deployment; ≥97 % accuracy outdoors; ARR ≥ US $3 M. |
+| **4. Autonomy (18–24 mo)** | **Aero Vision / Ground Robotics** | Enable autonomous inspections with mobile and ground robots. | Fleet logistics & OEM yards. | Multi-OEM deployment; ≥97 % accuracy outdoors; ARR ≥ US $3 M. |
 
 ---
 
@@ -127,7 +127,7 @@ Horizontal flow: **Capture → Detect → Reason → Verify & Learn → Report &
 - **Per-Scan / API Fees** — usage-based billing for inspections and claim scoring.  
 - **Per-Vehicle Licensing & DVPs** — recurring VIN-linked **Digital Vehicle Passport** records for OEM and dealer programs.
 - **Analytics & Compliance Add-Ons** — premium dashboards and audit tools.  
-- **Hardware-as-a-Service (HaaS)** — leasing for drones and ground-navigating robots.  
+- **Hardware-as-a-Service (HaaS)** — leasing for mobile and ground-navigating robots.  
 
 
 ### Phased Revenue Growth  
@@ -159,19 +159,19 @@ Upward staircase or layered chart showing ARR progression from **$150K → $3M+*
 | **1. Foundation (0–6 mo)** | Used-car dealers & rental fleets | Validate edge inspection speed & accuracy | Direct pilots + calibration kits |
 | **2. Expansion (6–12 mo)** | Insurers & claims processors | Automate claim verification & reduce disputes | Integrate Claim Vision API with 2 insurers |
 | **3. Enterprise (12–18 mo)** | OEMs & dealership networks | Launch full SaaS suite and digital passport | OEM ERP / VPC integrations |
-| **4. Autonomy (18–24 mo)** | Fleet logistics & OEM yards | Scale with autonomous inspection (drones & robots) | Multi-site deployments via partners |
+| **4. Autonomy (18–24 mo)** | Fleet logistics & OEM yards | Scale with autonomous inspection (mobile & ground robots) | Multi-site deployments via partners |
 
 
 ### Partnership Ecosystem  
 
-- **Technology Partners** — Drone, LiDAR, and robotic hardware providers for data capture.  
+- **Technology Partners** — LiDAR and robotic hardware providers for data capture.  
 - **Integration Partners** — ERP, DMS, and insurance API vendors for seamless backend adoption.  
 - **Strategic Clients** — OEMs, insurers, and fleet operators co-developing inspection use cases.  
 - **Governance Allies** — ISO 42001 and AI compliance collaborators for audit-ready AI adoption.  
 
 
 #### Visual Cue  
-Four-phase horizontal timeline showing *pilot → API integration → enterprise rollout → autonomy*, with partner logos (e.g., insurer, OEM, drone tech) layered above each phase.  
+Four-phase horizontal timeline showing *pilot → API integration → enterprise rollout → autonomy*, with partner logos (e.g., insurer, OEM, robotics tech) layered above each phase.  
 
 --- #10
 

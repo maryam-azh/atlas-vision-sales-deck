@@ -3,28 +3,29 @@ import { useSwipeable } from 'react-swipeable'
 import { motion, AnimatePresence } from 'framer-motion'
 import Slide1_Hero from './slides/Slide1_Hero'
 import Slide2_Problem from './slides/Slide2_Problem'
-import Slide3_Market from './slides/Slide3_Market'
+// import Slide3_Market from './slides/Slide3_Market'
 import Slide4_Solution from './slides/Slide4_Solution'
 import Slide5_Product from './slides/Slide5_Product'
 import Slide6_ValueProp from './slides/Slide6_ValueProp'
 import Slide7_Roadmap from './slides/Slide7_Roadmap'
-import Slide8_GTM from './slides/Slide8_GTM'
+// import Slide8_GTM from './slides/Slide8_GTM'
 import Slide9_Revenue from './slides/Slide9_Revenue'
-import Slide10_Ask from './slides/Slide10_Ask'
+// import Slide10_Ask from './slides/Slide10_Ask'
 import Slide11_Team from './slides/Slide11_Team'
 import Navigation from './components/Navigation'
 
 const slides = [
   Slide1_Hero,
   Slide2_Problem,
-  Slide3_Market,
+  // Slide3_Market,
   Slide4_Solution,
   Slide5_Product,
-  Slide6_ValueProp,
+  
   Slide7_Roadmap,
-  Slide8_GTM,
+  // Slide8_GTM,
   Slide9_Revenue,
-  Slide10_Ask,
+  Slide6_ValueProp,
+  // Slide10_Ask,
   Slide11_Team,
 ]
 

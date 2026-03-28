@@ -73,13 +73,13 @@ export default function Slide11_Team() {
                 <a href="https://www.linkedin.com/in/maryam-azh/" target="_blank" rel="noopener noreferrer" className="no-underline">
                   <img
                     src={maryamImg}
-                    alt="Maryam Azh, PhD"
+                    alt="Maryam Azh"
                     className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
                     style={{ objectPosition: '50% 5%' }}
                   />
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Maryam Azh, PhD</h3>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Maryam Azh</h3>
                 </a>
-                <p className="font-mono text-xs sm:text-sm mb-1">AI Product Strategy</p>
+                <p className="font-mono text-xs sm:text-sm mb-1">Product Strategy</p>
                 <p className="font-body text-xs sm:text-sm">
                   15+ years in AI product development & digital transformation
                 </p>
@@ -90,16 +90,15 @@ export default function Slide11_Team() {
                 <a href="https://en.wikipedia.org/wiki/Nihon_Hidankyo" target="_blank" rel="noopener noreferrer" className="no-underline">
                   <img
                     src={nihonImg}
-                    alt="Nihon Hidankyo, MBA"
+                    alt="Nihon Hidankyo"
                     className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
                     style={{ objectPosition: '30% 5%' }}
                   />
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Nihon Hidankyo, MBA</h3>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Nihon Hidankyo</h3>
                 </a>
                 <p className="font-mono text-xs sm:text-sm mb-1">Automotive & Operations</p>
                 <p className="font-body text-xs sm:text-sm">
-                  20+ years in
-                   automotive quality control & operations across APAC
+                  20+ years in automotive quality control & digital transformation
                 </p>
               </div>
             </div>
@@ -122,39 +121,14 @@ export default function Slide11_Team() {
               >
                 <img
                   src={nargesImg}
-                  alt="Narges Mohammadi, PhD"
+                  alt="Narges Mohammadi"
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                Narges Mohammadi, PhD
+                Narges Mohammadi
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
-                  Vision AI & <br />Computational Imaging
-                </p>
-                <img
-                  src={linkedinIcon}
-                  alt="LinkedIn"
-                  className="w-4 h-4 sm:w-5 sm:h-5 mt-2 opacity-70 group-hover:opacity-100"
-                />
-              </a>
-
-              {/* Maria */}
-              <a
-                href="https://en.wikipedia.org/wiki/Mar%C3%ADa_Corina_Machado"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center text-center group hover:opacity-90 transition-all"
-              >
-                <img
-                  src={mariaImg}
-                  alt="María Corina Machado"
-                  className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
-                />
-                <strong className="text-sm sm:text-base group-hover:underline">
-                  María Corina Machado, PhD
-                </strong>
-                <p className="text-xs text-white mt-2 leading-tight">
-                  Data Science & <br />Machine Learning
+                  Agentic Visual AI
                 </p>
                 <img
                   src={linkedinIcon}
@@ -179,12 +153,37 @@ export default function Slide11_Team() {
                   Ales Bialiatski
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
-                  Strategy & <br />Go-to-Market
+                  Partner Success
                 </p>
                 <img
                   src={linkedinIcon}
                   alt="LinkedIn"
                   className="w-4 h-4 sm:w-5 sm:h-5 mt-2 opacity-100 group-hover:opacity-100"
+                />
+              </a>
+
+              {/* Maria */}
+              <a
+                href="https://en.wikipedia.org/wiki/Mar%C3%ADa_Corina_Machado"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center text-center group hover:opacity-90 transition-all"
+              >
+                <img
+                  src={mariaImg}
+                  alt="María Corina Machado"
+                  className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
+                />
+                <strong className="text-sm sm:text-base group-hover:underline">
+                  María Corina Machado
+                </strong>
+                <p className="text-xs text-white mt-2 leading-tight">
+                  Enterprise Deployment
+                </p>
+                <img
+                  src={linkedinIcon}
+                  alt="LinkedIn"
+                  className="w-4 h-4 sm:w-5 sm:h-5 mt-2 opacity-70 group-hover:opacity-100"
                 />
               </a>
             </div>

@@ -43,7 +43,7 @@ export default function Slide6_ValueProp() {
       <div className="max-w-7xl mx-auto relative z-10 p-6 md:p-8 lg:p-10">
         <h2 className="value-title text-4xl sm:text-5xl lg:text-6xl font-black mb-2 sm:mb-3 opacity-0">VALUE PROPOSITION</h2>
         <p className="value-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-3 sm:mb-4 opacity-0">
-          We deliver significant gains and consistent customer satisfaction with measurable impact.
+          Achieve consistent customer satisfaction with measurable efficiency impact.
         </p>
 
         <div>
@@ -65,7 +65,7 @@ export default function Slide6_ValueProp() {
                 ACCELERATED OPERATIONS
               </h3>
               <p className="text-xs sm:text-sm lg:text-base font-body leading-relaxed">
-                Cut inspection time from 20+ minutes to seconds and unblock bottlenecks
+                Cut inspection time from 20+ minutes to seconds 
               </p>
               
               {/* Hover/Touch content */}
@@ -83,7 +83,7 @@ export default function Slide6_ValueProp() {
                     </div>
                   </div>
                   <div className="text-[10px] sm:text-xs lg:text-sm text-gray-700 text-center leading-tight">
-                    <span className="font-black">Modules:</span> Vision Pro, Claim API, Vision Lite
+                    {/* <span className="font-black">Modules:</span> Vision Pro, Claim API, Vision Lite */}
                   </div>
                 </div>
               </div>
@@ -102,10 +102,10 @@ export default function Slide6_ValueProp() {
               onKeyDown={(e) => e.key === 'Enter' && setActiveCard(activeCard === 2 ? null : 2)}
             >
               <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2 leading-tight">
-                CONSISTENT ACCURACY
+                CONSISTENT DETECTIONS
               </h3>
               <p className="text-xs sm:text-sm lg:text-base font-body leading-relaxed">
-                Eliminate human error with consistent, auditable, data-driven records
+                Catch misses with verified, auditable, data-driven records
               </p>
               
               {/* Hover/Touch content */}
@@ -123,7 +123,7 @@ export default function Slide6_ValueProp() {
                     </div>
                   </div>
                   <div className="text-[10px] sm:text-xs lg:text-sm text-gray-700 text-center leading-tight">
-                    <span className="font-black">Modules:</span> Calibration + Governance + Learning
+                    {/* <span className="font-black">Modules:</span> Calibration + Governance + Learning */}
                   </div>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function Slide6_ValueProp() {
                 LIFECYCLE SCALABILITY
               </h3>
               <p className="text-xs sm:text-sm lg:text-base font-body leading-relaxed">
-                One modular platform serves OEMs, insurers, fleets, and rental companies
+                Own the entire inspection workflow across supply chain
               </p>
               
               {/* Hover/Touch content */}
@@ -163,7 +163,7 @@ export default function Slide6_ValueProp() {
                     </div>
                   </div>
                   <div className="text-[10px] sm:text-xs lg:text-sm text-gray-700 text-center leading-tight">
-                    <span className="font-black">Modules:</span> Vision Pro · Vision Lite · Claim · Aero
+                    {/* <span className="font-black">Modules:</span> Vision Pro · Vision Lite · Claim · Aero */}
                   </div>
                 </div>
               </div>
@@ -203,7 +203,7 @@ export default function Slide6_ValueProp() {
                     </div>
                   </div>
                   <div className="text-[10px] sm:text-xs lg:text-sm text-gray-700 text-center leading-tight">
-                    <span className="font-black">Modules:</span> Digital Passport + Reports + History
+                    {/* <span className="font-black">Modules:</span> Digital Passport + Reports + History */}
                   </div>
                 </div>
               </div>
@@ -231,18 +231,18 @@ export default function Slide6_ValueProp() {
   const chips = [
     {
       key: 5,
-      title: "Deploy Anywhere",
-      blurb: "Edge-native architecture runs on mobile without heavy setup or persistent connectivity.",
+      title: "Autonomy built upon human intelligence",
+      blurb: "Embedded human oversight and active feedback for continuously improving AI.",
     },
     {
       key: 6,
-      title: "Scale Effortlessly",
-      blurb: "One AI model orchestrates inspections with linear scalability across agents.",
+      title: "Responsible Scalability with Mobile Autonomy",
+      blurb: "Cost-optimized architecture and embedded governance running on the edge or cloud.",
     },
     {
       key: 7,
-      title: "Monetize Insight",
-      blurb: "Continuous inspection data becomes analytics & feedback assets for partners via DVP.",
+      title: "Paradigm Shift into AI-Powered Workflows",
+      blurb: "Guided transformation to drive adoption by our team of automotive experts.",
     }
   ];
 
@@ -254,10 +254,10 @@ export default function Slide6_ValueProp() {
         {/* Left: headline + summary + pill */}
         <div className="lg:col-span-1">
           <h3 className="text-xl sm:text-2xl lg:text-3xl font-black leading-tight">
-            MOBILITY & SCALABILITY<br className="hidden sm:block" /> AT THE CORE
+            SCALE WITH CONFIDENCE <br className="hidden sm:block" /> BUILT ON PARTNERSHIP
           </h3>
           <div className="mt-2 text-sm text-white">
-            Scale from a single handheld scan to a fully autonomous multi-agent fleet.
+            {/* Strong team of experts to bring you along the journey from concept to scale. */}
           </div>
           <div className="mt-3">
             <span
@@ -268,7 +268,7 @@ export default function Slide6_ValueProp() {
                 border: `1px solid ${accent.border}`
               }}
             >
-              Edge-native • API-ready • Offline-first
+              Human Oversight • Governance • Adoption
             </span>
           </div>
         </div>
