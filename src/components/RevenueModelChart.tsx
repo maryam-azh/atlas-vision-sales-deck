@@ -15,7 +15,7 @@ const pricingData = [
     consultancyValue: 160000,
     phase: "1",
     name: "Atlas Vision Lite - workshop",
-    priceRange: "Setup . Multi-site Monthly ",
+    priceRange: ["Setup", "Multi-site Monthly"],
     pricingNote: "Unlimited use with mobile hardware provided",
     tagline: "Proof of concept package with validated performance",
     highlights: [
@@ -32,9 +32,9 @@ const pricingData = [
     consultancyValue: 250000,
     phase: "2",
     name: "Atlas Vision Restore - workshop",
-    priceRange: "Custom . Multi-site Monthly",
+    priceRange: ["Custom", "Multi-site Monthly"],
     pricingNote: "",
-    tagline: "Mobile scanner pluged into your existing workflows",
+    tagline: "Mobile scanner plugged into your existing workflows",
     highlights: [
       "Improved performance for defect range expansion",
       "CI/CD with HITL and continuous learning",  
@@ -49,7 +49,7 @@ const pricingData = [
     consultancyValue: 1500000,
     phase: "2.5",
     name: "Atlas Vision Suite - VPC warehouse",
-    priceRange: "Custom . Multi-site Monthly",
+    priceRange: ["Custom", "Multi-site Monthly"],
     pricingNote: "",
     tagline: "Scaled deployment tailored to supply chain operations",
     highlights: [
@@ -65,14 +65,14 @@ const pricingData = [
     premiumValue: 4500000,
     consultancyValue: 3500000,
     phase: "3",
-    name: "Atlas Ground Vision Suite - VPC warehouse",
-    priceRange: "Custom · Structured annually . ownership options",
+    name: "Atlas Robotic Vision Suite - Enterprise",
+    priceRange: ["Custom", "Structured annually", "Ownership options"],
     pricingNote: "Bundle options with edge ground-robot hardware lease",
     tagline: "Horizontal scale up with semi-autonomous hardware",
     highlights: [
       "Autonomy with ground-robot integration",
       "Workflow orchestration and data integrations",
-      "Dedicated transofrmation team",
+      "Dedicated transformation team",
     ],
     color: "#C1E1C1",
   },
@@ -145,7 +145,14 @@ const PricingCallout = ({ active, payload }: any) => {
         <div style={{ fontSize: fs - 2, color: '#666', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: 2 }}>
           Indicative Price
         </div>
-        <div style={{ fontSize: pfs, fontWeight: 800, color: '#1a1a2e' }}>{d.priceRange}</div>
+        <div style={{ fontSize: pfs, fontWeight: 800, color: '#1a1a2e', lineHeight: 1.2 }}>
+          {(Array.isArray(d.priceRange) ? d.priceRange : [d.priceRange]).map((line: string, idx: number, arr: string[]) => (
+            <React.Fragment key={idx}>
+              {line}
+              {idx < arr.length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </div>
         <div style={{ fontSize: fs - 2, color: '#888', marginTop: 3 }}>{d.pricingNote}</div>
       </div>
 
@@ -225,7 +232,7 @@ export const PricingModelChart: React.FC = () => {
       {/* ── Area Chart ── */}
       <div style={{ width: '100%', height: minH }}>
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={pricingData} margin={{ top: 55, right: 30, left: 30, bottom: 28 }}>
+          <AreaChart data={pricingData} margin={{ top: 55, right: 150, left: 30, bottom: 28 }}>
             <defs>
               <linearGradient id="gradConsultancy" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="70%" stopColor="#9B7FBF" stopOpacity={0.85} />
@@ -308,7 +315,7 @@ export const PricingModelChart: React.FC = () => {
             {/* Package milestone dots */}
             {pricingData
               .filter((p: any) => p.month > 0)
-              .map((entry: any) => (
+              .map((entry: any, idx: number, arr: any[]) => (
                 <ReferenceDot
                   key={`dot-${entry.month}`}
                   x={entry.month}
@@ -325,6 +332,7 @@ export const PricingModelChart: React.FC = () => {
                     fontSize={isMobile ? 9 : isTablet ? 10 : 11}
                     fontWeight="bold"
                     fill="#555"
+                    textAnchor={idx === arr.length - 1 ? "end" : "middle"}
                   />
                 </ReferenceDot>
               ))}

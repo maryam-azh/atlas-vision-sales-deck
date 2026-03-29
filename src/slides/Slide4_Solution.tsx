@@ -79,7 +79,7 @@ export default function Slide4_Solution() {
 
             <div className="solution-box bg-white rounded-2xl shadow-md border border-gray-200 p-4 sm:p-5 flex flex-col opacity-0">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2 sm:mb-3">
-                SCALABLE & AUTONOMOUS
+                ROBOTIC & AUTONOMOUS
               </h3>
               <p className="font-body text-sm sm:text-base flex-1">
                 <strong>Mobile robotics enable inspection operations safely with minimal human intervention.</strong>

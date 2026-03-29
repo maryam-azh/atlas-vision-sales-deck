@@ -35,7 +35,10 @@ export default function ProductRoadmapS() {
       title: "Atlas Vision Lite",
       description: "Edge app for rental and used-car inspection",
       timeline: "Q2–Q3 2026",
-      role: "Early market traction and dataset generation",
+      role: "Technical and Business Validation",
+      bridging: [
+        "Discovery & business process mapping",
+      ],
       color: "#D0E8E1",
       badgeColor: "bg-black"
     },
@@ -45,7 +48,12 @@ export default function ProductRoadmapS() {
       title: "Atlas Vision Restore",
       description: "Mobile scanner integrated into existing workshop workflows",
       timeline: "Q3 2026–Q1 2027",
-      role: "Expands SaaS footprint in insurance & repair; validates VLM performance",
+      role: "Workshop workflow integration and performance optimization",
+      bridging: [
+        "Workshop process redesign",
+        "New ways of working (NWOW)",
+        "Product training",
+      ],
       color: "#AAC8E2",
       badgeColor: "bg-black"
     },
@@ -55,17 +63,28 @@ export default function ProductRoadmapS() {
       title: "Atlas Vision Suite — VPC",
       description: "Scaled agentic inspection for Vehicle Processing Centers & warehouses",
       timeline: "Q1 2027 – Q1 2028",
-      role: "OEM entry wedge; rapid ROI pilot-to-production path",
+      role: "Vertical integration into VPCs with enhanced autonomy and performance",
+      bridging: [
+        "VPC workflow redesign",
+        "Dedicated business onboarding",
+        "AI Safety training",
+        "Scale-up NWOW",
+      ],
       color: "#F5F3E6",
       badgeColor: "bg-black"
     },
     {
       id: 4,
       phase: "Phase 4",
-      title: "Atlas Ground Vision Suite",
+      title: "Atlas Ground Robotic Vision Suite",
       description: "Horizontal scale-up with semi-autonomous ground-robot hardware",
-      timeline: "Q1 2028 – Q4 2028",
-      role: "Core OEM adoption path with semi-autonomous ground scanning",
+      timeline: "Q1 2028 – onwards",
+      role: "Horizontal expansion into new use cases with semi-autonomous hardware",
+      bridging: [
+        "AI-enabled workflow transformation",
+        "Robotic AI Safety training",
+        "Integration maintenance team",
+      ],
       color: "#F6D9C9",
       badgeColor: "bg-black"
     }
@@ -161,6 +180,18 @@ export default function ProductRoadmapS() {
                   <p className="text-xs sm:text-sm text-gray-700 leading-snug font-body">
                     {milestone.role}
                   </p>
+                  {/* Bridging & Redesign */}
+                  <div className="mt-2 pt-2 border-t border-black/10">
+                    <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Bridging &amp; Redesign</p>
+                    <ul className="space-y-0.5">
+                      {milestone.bridging.map((item, i) => (
+                        <li key={i} className="flex items-start gap-1.5 text-xs text-gray-700 font-body">
+                          <span className="mt-1 w-1.5 h-1.5 rounded-full bg-gray-500 flex-shrink-0"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
@@ -344,6 +375,23 @@ export default function ProductRoadmapS() {
                 <p className="text-xs text-gray-700 leading-snug font-body">
                   {milestones.find(m => m.id === hoveredMilestone)?.role}
                 </p>
+                {/* Bridging & Redesign */}
+                {(() => {
+                  const bItems = milestones.find(m => m.id === hoveredMilestone)?.bridging;
+                  return bItems && bItems.length > 0 ? (
+                    <div className="mt-2 pt-2 border-t border-black/10">
+                      <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1">Bridging &amp; Redesign</p>
+                      <ul className="space-y-0.5">
+                        {bItems.map((item, i) => (
+                          <li key={i} className="flex items-start gap-1.5 text-xs text-gray-700 font-body">
+                            <span className="mt-1 w-1.5 h-1.5 rounded-full bg-gray-500 flex-shrink-0"></span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null;
+                })()}
               </div>
             </div>
           )}
