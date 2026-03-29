@@ -32,11 +32,14 @@ export default function ProductRoadmapS() {
     {
       id: 1,
       phase: "Phase 1",
-      title: "Atlas Vision Lite",
+      title: "Atlas Vision Lite - Rental/Used-car",
       description: "Edge app for rental and used-car inspection",
-      timeline: "Q2–Q3 2026",
+      timeline: "Q4 2026–Q1 2027",
       role: "Technical and Business Validation",
       bridging: [
+        "Readiness level assessment",
+        "Prototype completion",
+        "Resource availability",
         "Discovery & business process mapping",
       ],
       color: "#D0E8E1",
@@ -45,9 +48,9 @@ export default function ProductRoadmapS() {
     {
       id: 2,
       phase: "Phase 2",
-      title: "Atlas Vision Restore",
+      title: "Atlas Vision Restore - Workshop",
       description: "Mobile scanner integrated into existing workshop workflows",
-      timeline: "Q3 2026–Q1 2027",
+      timeline: "Q2 2027–Q4 2027",
       role: "Workshop workflow integration and performance optimization",
       bridging: [
         "Workshop process redesign",
@@ -60,9 +63,9 @@ export default function ProductRoadmapS() {
     {
       id: 3,
       phase: "Phase 3",
-      title: "Atlas Vision Suite — VPC",
+      title: "Atlas Vision Suite - VPC warehouse",
       description: "Scaled agentic inspection for Vehicle Processing Centers & warehouses",
-      timeline: "Q1 2027 – Q1 2028",
+      timeline: "Q1 2028–Q1 2029",
       role: "Vertical integration into VPCs with enhanced autonomy and performance",
       bridging: [
         "VPC workflow redesign",
@@ -76,9 +79,9 @@ export default function ProductRoadmapS() {
     {
       id: 4,
       phase: "Phase 4",
-      title: "Atlas Ground Robotic Vision Suite",
+      title: "Atlas Robotic Vision Suite - Enterprise",
       description: "Horizontal scale-up with semi-autonomous ground-robot hardware",
-      timeline: "Q1 2028 – onwards",
+      timeline: "Q2 2029 – onwards",
       role: "Horizontal expansion into new use cases with semi-autonomous hardware",
       bridging: [
         "AI-enabled workflow transformation",
@@ -94,22 +97,26 @@ export default function ProductRoadmapS() {
     {
       name: "Integration Management",
       description: "Backward compatibility, robust API versioning, and wrappers for reliability in live deployments.",
-      color: "#D0E8E1"
+      color: "#D0E8E1",
+      availableFrom: "Phase 1"
     },
     {
       name: "Containerized Scaling",
       description: "Securely isolates each device or robot as an independent unit for maximum scalability and security.",
-      color: "#AAC8E2"
+      color: "#AAC8E2",
+      availableFrom: "Phase 2"
     },
     {
       name: "Cost-aware Architecture",
-      description: "Inference gradually migrates on device to minimize bandwidth once performance is stable.",
-      color: "#F6D9C9"
+      description: "Optimized edge inference delivers sub-minute latency from day one; cloud bandwidth reduces progressively as on-device performance stabilizes.",
+      color: "#F6D9C9",
+      availableFrom: "Phase 3"
     },
     {
       name: "Governance Engine",
       description: "Adopting robust AI Governance framework to meet regulatory requirements across use cases.",
-      color: "#F5F3E6"
+      color: "#F5F3E6",
+      availableFrom: "Phase 1"
     }
   ];
 
@@ -133,7 +140,7 @@ export default function ProductRoadmapS() {
             PRODUCT ROADMAP
           </h1>
           <p className="roadmap-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">
-            From mobile only workshop inspection to robotic fleet inspections in Vehicle Processing Centers (VPCs).
+            Our solution evolves from mobile scanners to robotic agents for Enterprise inspection workflows.
           </p>
         </div>
 
@@ -328,7 +335,7 @@ export default function ProductRoadmapS() {
               <circle cx="470" cy="300" r="30" fill="#F5F3E6" stroke="#000" strokeWidth="2" filter="url(#glow)">
                 <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="1.125s"/>
               </circle>
-              <text x="470" y="310" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">3</text>
+              <text x="470" y="307" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">3</text>
             </g>
 
             <g
@@ -340,7 +347,7 @@ export default function ProductRoadmapS() {
               <circle cx="875" cy="380" r="30" fill="#F6D9C9" stroke="#000" strokeWidth="2" filter="url(#glow)">
                 <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" begin="1.5s"/>
               </circle>
-              <text x="875" y="392" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">4</text>
+              <text x="875" y="390" fontSize="26" fontWeight="1000" textAnchor="middle" fill="#000">4</text>
             </g>
           </svg>
 
@@ -413,9 +420,14 @@ export default function ProductRoadmapS() {
                 className="p-3 sm:p-4 lg:p-5 shadow-md rounded-2xl border border-gray-200 flex flex-col min-h-[100px] sm:min-h-[120px]"
                 style={{ backgroundColor: module.color }}
               >
-                <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-2 leading-tight">
-                  {module.name}
-                </h3>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-sm sm:text-base lg:text-lg font-bold leading-tight flex-1 pr-2">
+                    {module.name}
+                  </h3>
+                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-black text-white whitespace-nowrap flex-shrink-0">
+                    From {module.availableFrom}
+                  </span>
+                </div>
                 <p className="text-xs sm:text-sm lg:text-base leading-relaxed font-body">
                   {module.description}
                 </p>

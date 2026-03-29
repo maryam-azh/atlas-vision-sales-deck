@@ -47,7 +47,7 @@ export default function Slide1_Hero() {
           ATLAS VISION
         </h1>
         <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-6 sm:mb-8 opacity-0" data-testid="hero-subtitle">
-          AI-Powered Robotics for Automotive Pre-Delivery Inspection
+          Agentic AI for Automotive Visual Inspection and Workflow Automation
         </p>
 
         {/* Main Content Grid */}
@@ -59,11 +59,11 @@ export default function Slide1_Hero() {
               OUR MISSION
             </h2>
             <p className="text-base sm:text-lg lg:text-xl font-body leading-relaxed mb-6">
-              To revolutionize quality control with AI inspection technology
+              To revolutionize visual inspection workflows with Agentic Visual AI, powered by human intelligence
             </p>
             <div className="mt-4 p-4 sm:p-6 bg-black text-white rounded-xl">
               <p className=" leading-relaxed text-base sm:text-lg lg:text-xl">
-                Autonomous intelligent agents that identify, categorize, and process damages and defects across the automotive supply chain
+                Self-improving intelligent agents that identify, categorize, and process damages and defects in automotive parts and vehicles
               </p>
             </div>
           </div>

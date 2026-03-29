@@ -7,7 +7,7 @@ export default function Slide5_Product() {
       icon: "",
       title: "Multimodal Vision Hardware",
       color: "purple",
-      modules: [ "Ground Robots", "Mobile Vision", "Autonomous Mobility Control"],
+      modules: [ "Mobile Device", "Lighting","Sensors","Robots with Autonomous Mobility Control"],
       outcome: "Data capture across diverse inspection environments",
       category: "EDGE LAYER",
       order: 1
@@ -42,10 +42,10 @@ export default function Slide5_Product() {
     },
     {
       icon: "",
-      title: "Human Verification Interface",
+      title: "Human Interface",
       color: "cream",
-      modules: ["RLHF", "Voice-Visual Interface"],
-      outcome: "Validated defects and human-AI collaboration for edge cases and continuous learning",
+      modules: ["Verification and Review","Alerting & Notifications", "Analytics Dashboard"],
+      outcome: "Validated defects, actionable insights, and seamless human-AI collaboration",
       category: "HUMAN INTERFACE",
       order: 5
     },
@@ -221,6 +221,17 @@ export default function Slide5_Product() {
           <div className="absolute" style={{ top: '33%', left: '38%', width: '24.15%', height: '27%', zIndex: 2 }}>
             {renderModule(layers[1], colorClasses)}
           </div>
+        </div>
+
+        {/* Data & Privacy Compliance Strip */}
+        <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-gray-200">
+          <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider flex-shrink-0">Data &amp; Privacy</span>
+          {['GDPR Ready', 'Data Residency Controls', 'ISO 27001 Aligned', 'Audit Trails', 'EU AI Act Aligned'].map(tag => (
+            <span key={tag} className="text-[10px] font-bold px-2 py-0.5 rounded border border-gray-300 bg-gray-50 text-gray-600">
+              {tag}
+            </span>
+          ))}
+          <span className="text-[10px] text-gray-400 font-body ml-1">— enforced via the Governance &amp; Security module in the Control Layer</span>
         </div>
       </div>
     </div>

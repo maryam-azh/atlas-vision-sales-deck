@@ -53,7 +53,7 @@ export default function Slide4_Solution() {
 
       <div className="max-w-7xl mx-auto relative z-10 p-6 md:p-8 lg:p-10">
         <h2 className="solution-title text-4xl sm:text-5xl lg:text-6xl font-black mb-2 sm:mb-3 opacity-0">THE SOLUTION</h2>
-        <p className="solution-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">Mobile Autonomy Powered by AI for Your Vehicle Pre-Delivery Inspection Workflows.</p>
+        <p className="solution-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">Mobile Visual AI adds consistency, traceability and preventive insights to Inspection Workflows .</p>
 
         <div className="flex flex-col gap-1">
           
@@ -61,28 +61,28 @@ export default function Slide4_Solution() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
             <div className="solution-box bg-white rounded-2xl shadow-md border border-gray-200 p-4 sm:p-5 flex flex-col opacity-0">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2 sm:mb-3">
-                MOBILE & AGENTIC
+                 AGENTIC & SCALABLE
               </h3>
               <p className="font-body text-sm sm:text-base flex-1">
-                <strong>Mobile AI agents orchestrate inspection tasks verified by human oversight.</strong>
+                <strong> Mobile scanners trigger AI agents to orchestrate modular inspection tasks for indoor and outdoor environments.</strong>
               </p>
             </div>
 
             <div className="solution-box bg-white rounded-2xl shadow-md border border-gray-200 p-4 sm:p-5 flex flex-col opacity-0">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2 sm:mb-3">
-                CUSTOMER CENTRIC
+                SMART & EFFICIENT
               </h3>
               <p className="font-body text-sm sm:text-base flex-1">
-                <strong>Our team of automotive experts guide enterprise bridging to AI-enabled workflows.</strong>
+                <strong>Data flywheel continuously improves inspection accuracy and efficiency with human oversight and learning architecture.</strong>
               </p>
             </div>
 
             <div className="solution-box bg-white rounded-2xl shadow-md border border-gray-200 p-4 sm:p-5 flex flex-col opacity-0">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2 sm:mb-3">
-                ROBOTIC & AUTONOMOUS
+                AUTONOMOUS & SAFE
               </h3>
               <p className="font-body text-sm sm:text-base flex-1">
-                <strong>Mobile robotics enable inspection operations safely with minimal human intervention.</strong>
+                <strong>Mobile robotics enable cost-effective inspection operations with governed levels of autonomy.</strong>
               </p>
             </div>
           </div>

@@ -94,22 +94,37 @@ export default function Slide2_Problem() {
           <div className="flex flex-col lg:h-full items-start justify-between gap-4 lg:gap-4 lg:max-w-7xl">
             <h3 className="text-2xl sm:text-5xl lg:text-3xl font-black mb-2 flex items-center gap-3">
               <span className="w-3 h-20 bg-black rounded-full flex-shrink-0"></span>
-              <span>At least 10% of 550M+ vehicles <br /> are inspected manually <br />each year</span>
+              <span>
+                At least 10% of 550M+ vehicles<sup className="text-base font-normal">*</sup>
+                <br /> are inspected manually <br />each year
+              </span>
             </h3>
 
             <div className="bg-black text-white rounded-2xl shadow-md border border-gray-200 p-5 lg:p-12">
               {/* <div className="bg-black text-white p-6 rounded-xl"> */}
                 <h4 className="text-xl sm:text-2xl font-black mb-4">KEY PAIN POINTS</h4>
                 <ul className="space-y-3 font-body text-base sm:text-lg">
-                  <li>• <strong>Inconsistent results:</strong> Up to 30% of defects undetected</li>
-                  <li>• <strong>Delivery bottlenecks:</strong> 20–30 minutes per vehicle</li>
-                  <li>• <strong>High cost of errors:</strong> Hundreds of millions annually</li>
-                  <li>• <strong>Minimal digital traceability:</strong> Paper-based, no analytics</li>
+                  <li>• <strong>Manual and Outdated Inspection Methods:</strong> Insufficient detection and overlooked quality issues</li>
+                  <li>• <strong>Poor Tracking and Analysis of Recurring Defects:</strong> Failure to take preventive actions & process improvements</li>
+                  <li>• <strong>Inadequate Investment in Modernization:</strong> Variability in inspection and higher costs associated with defects</li>
                 </ul>
               </div>
             {/* </div> */}
           </div>
         </div>
+
+        {/* Citation footnote */}
+        <p className="mt-3 text-[11px] text-gray-400 font-body">
+          * Source:{' '}
+          <a
+            href="https://automated-vehicle-inspection.michelin.com/resources/how-is-ai-revolutionizing-car-inspections/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-600"
+          >
+            Michelin — How is AI Revolutionizing Car Inspections
+          </a>
+        </p>
       </div>
     </div>
   );
