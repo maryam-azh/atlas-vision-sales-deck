@@ -1,9 +1,16 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { animate } from 'animejs'
 import workshopImg from '../assets/workshop1.jpg';
 import storageImg from '../assets/fleet.jpg';
 
 export default function Slide2_Problem() {
+  const [activeCallout, setActiveCallout] = useState<number | null>(null)
+
+  const callouts = [
+    { label: 'Labour cost', value: '$540K p/a per site' },
+    { label: 'Error rate', value: 'Spikes up to 40%' },
+    { label: 'Human accuracy', value: 'Capped at 85%' },
+  ]
   useEffect(() => {
     const titleEl = document.querySelector('.problem-title')
     const subtitleEl = document.querySelector('.problem-subtitle')
@@ -96,17 +103,88 @@ export default function Slide2_Problem() {
               <span className="w-3 h-20 bg-black rounded-full flex-shrink-0"></span>
               <span>
                 At least 10% of 550M+ vehicles<sup className="text-base font-normal">*</sup>
-                <br /> are inspected manually <br />each year
+                <br /> manually inspected each year
               </span>
             </h3>
 
-            <div className="bg-black text-white rounded-2xl shadow-md border border-gray-200 p-5 lg:p-12">
+            <div className="bg-black text-white rounded-2xl shadow-md border border-gray-200 p-4 lg:p-6">
               {/* <div className="bg-black text-white p-6 rounded-xl"> */}
-                <h4 className="text-xl sm:text-2xl font-black mb-4">KEY PAIN POINTS</h4>
+                <h4 className="text-xl sm:text-2xl font-black mb-4">KEY PAIN POINTS **</h4>
                 <ul className="space-y-3 font-body text-base sm:text-lg">
-                  <li>• <strong>Manual and Outdated Inspection Methods:</strong> Insufficient detection and overlooked quality issues</li>
-                  <li>• <strong>Poor Tracking and Analysis of Recurring Defects:</strong> Failure to take preventive actions & process improvements</li>
-                  <li>• <strong>Inadequate Investment in Modernization:</strong> Variability in inspection and higher costs associated with defects</li>
+                  <li className="relative">
+                    <span>• <strong>Manual and Outdated Inspection Methods</strong> </span>
+                    <div className="flex flex-wrap gap-1.5 mt-2">
+                      {callouts.map((c, i) => (
+                        <button
+                          key={i}
+                          onMouseEnter={() => setActiveCallout(i)}
+                          onMouseLeave={() => setActiveCallout(null)}
+                          onClick={() => setActiveCallout(activeCallout === i ? null : i)}
+                          className="relative text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border border-white/30 bg-white/10 hover:bg-white hover:text-black transition-colors cursor-default"
+                        >
+                          {c.label}
+                          {activeCallout === i && (
+                            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 whitespace-nowrap bg-white text-black text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-lg pointer-events-none z-20">
+                              {c.value}
+                              <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-white" />
+                            </span>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </li>
+                  <li className="relative">
+                    <span>• <strong>Poor Tracking and Analysis of Recurring Defects</strong> </span>
+                    <div className="flex flex-wrap gap-1.5 mt-2">
+                      {[
+                        { label: 'Recalls (2025)', value: '13M vehicles recalled' },
+                        { label: 'Cost per recall', value: '~$1,500 per vehicle' },
+                        { label: 'Defect escapes', value: '$500K annually' },
+                      ].map((c, i) => (
+                        <button
+                          key={i}
+                          onMouseEnter={() => setActiveCallout(10 + i)}
+                          onMouseLeave={() => setActiveCallout(null)}
+                          onClick={() => setActiveCallout(activeCallout === 10 + i ? null : 10 + i)}
+                          className="relative text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border border-white/30 bg-white/10 hover:bg-white hover:text-black transition-colors cursor-default"
+                        >
+                          {c.label}
+                          {activeCallout === 10 + i && (
+                            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 whitespace-nowrap bg-white text-black text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-lg pointer-events-none z-20">
+                              {c.value}
+                              <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-white" />
+                            </span>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </li>
+                  <li className="relative">
+                    <span>• <strong>Inadequate Investment in Modernization</strong></span>
+                    <div className="flex flex-wrap gap-1.5 mt-2">
+                      {[
+                        { label: 'ROI timeline', value: 'Achievable within 12 months' },
+                        { label: 'Market growth', value: '$2.64B by 2034 · 19.6% CAGR' },
+                        { label: 'Cost reduction', value: '75–90% long-term opex saving' },
+                      ].map((c, i) => (
+                        <button
+                          key={i}
+                          onMouseEnter={() => setActiveCallout(20 + i)}
+                          onMouseLeave={() => setActiveCallout(null)}
+                          onClick={() => setActiveCallout(activeCallout === 20 + i ? null : 20 + i)}
+                          className="relative text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border border-white/30 bg-white/10 hover:bg-white hover:text-black transition-colors cursor-default"
+                        >
+                          {c.label}
+                          {activeCallout === 20 + i && (
+                            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 whitespace-nowrap bg-white text-black text-[11px] font-bold px-2.5 py-1 rounded-lg shadow-lg pointer-events-none z-20">
+                              {c.value}
+                              <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-white" />
+                            </span>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </li>
                 </ul>
               </div>
             {/* </div> */}
@@ -123,6 +201,17 @@ export default function Slide2_Problem() {
             className="underline hover:text-gray-600"
           >
             Michelin — How is AI Revolutionizing Car Inspections
+          </a>
+        </p>
+        <p className="mt-1 text-[11px] text-gray-400 font-body">
+          ** Source:{' '}
+          <a
+            href="https://www.researchandmarkets.com/reports/6191412/automotive-quality-inspection-ai-system-market"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-600"
+          >
+            Research &amp; Markets — Automotive Quality Inspection AI System Market Report 2025
           </a>
         </p>
       </div>

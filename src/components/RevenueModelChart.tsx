@@ -49,7 +49,7 @@ const pricingData = [
     consultancyValue: 1500000,
     phase: "2.5",
     name: "Atlas Vision Suite - VPC warehouse",
-    priceRange: ["Custom", "Multi-site Monthly"],
+    priceRange: ["Custom", "Structured annually"],
     pricingNote: "",
     tagline: "Scaled deployment tailored to supply chain operations",
     highlights: [
@@ -218,7 +218,7 @@ export const PricingModelChart: React.FC = () => {
       {/* ── Legend ── */}
       <div style={{ display: 'flex', justifyContent: 'center', gap: isMobile ? 16 : 28, marginBottom: 10, flexWrap: 'wrap' }}>
         {[
-          { color: '#6B4C9A', label: 'Bridging & Redesign' },
+          { color: '#6B4C9A', label: 'Atlas Consultancy Services' },
           // { color: '#d76374', label: 'Core Packages' },
           { color: '#82ca9d', label: 'Technology' },
         ].map(({ color, label }) => (
@@ -270,7 +270,7 @@ export const PricingModelChart: React.FC = () => {
               tickFormatter={formatY}
               tick={{ fontSize: tickFs }}
               label={{
-                value: 'Platform Value Scale',
+                value: 'Estimated Value',
                 angle: -90,
                 position: 'insideLeft',
                 offset: -18,
@@ -348,7 +348,7 @@ export const PricingModelChart: React.FC = () => {
         color: '#bbb',
         padding: '0 16px',
       }}>
-        Hover each milestone to explore package details · Prices are indicative ranges, subject to scope &amp; volume
+        {/* Hover each milestone to explore package details · Prices are indicative ranges, subject to scope &amp; volume */}
       </div>
     </div>
   );

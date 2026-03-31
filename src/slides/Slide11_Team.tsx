@@ -55,7 +55,7 @@ export default function Slide11_Team() {
       <div className="max-w-7xl mx-auto relative z-10 p-6 md:p-8 lg:p-10">
         <h2 className="team-title text-4xl sm:text-5xl lg:text-6xl font-black mb-2 sm:mb-3 opacity-0">THE TEAM</h2>
         <p className="team-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">
-          We inspire each other with our passion for innovation.
+          We inspire you with our passion for innovation.
         </p>
 
         {/* Two aligned columns */}
@@ -79,7 +79,7 @@ export default function Slide11_Team() {
                   />
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Maryam Azh</h3>
                 </a>
-                <p className="font-mono text-xs sm:text-sm mb-1">Product Strategy</p>
+                <p className="font-mono text-xs sm:text-sm mb-1">AI Strategy</p>
                 <p className="font-body text-xs sm:text-sm">
                   15+ years in AI product development & digital transformation
                 </p>
@@ -90,11 +90,11 @@ export default function Slide11_Team() {
                 <a href="https://en.wikipedia.org/wiki/Nihon_Hidankyo" target="_blank" rel="noopener noreferrer" className="no-underline">
                   <img
                     src={nihonImg}
-                    alt="Nihon Hidankyo"
+                    alt="Team Member"
                     className="w-full h-48 sm:h-52 lg:h-56 object-cover mb-3 rounded-xl shadow-sm"
                     style={{ objectPosition: '30% 5%' }}
                   />
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Nihon Hidankyo</h3>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black mb-2">Team Member</h3>
                 </a>
                 <p className="font-mono text-xs sm:text-sm mb-1">Automotive & Operations</p>
                 <p className="font-body text-xs sm:text-sm">
@@ -121,11 +121,11 @@ export default function Slide11_Team() {
               >
                 <img
                   src={nargesImg}
-                  alt="Narges Mohammadi"
+                  alt="Team Member"
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                Narges Mohammadi
+                Team Member
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
                   Agentic Visual AI
@@ -146,11 +146,11 @@ export default function Slide11_Team() {
               >
                 <img
                   src={alesImg}
-                  alt="Ales Bialiatski"
+                  alt="Team Member, PhD in Computer Vision"
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                  Ales Bialiatski
+                  Team Member
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
                   Partner Success
@@ -175,7 +175,7 @@ export default function Slide11_Team() {
                   className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-cover mb-2"
                 />
                 <strong className="text-sm sm:text-base group-hover:underline">
-                  María Corina Machado
+                  Team Member 
                 </strong>
                 <p className="text-xs text-white mt-2 leading-tight">
                   Enterprise Deployment

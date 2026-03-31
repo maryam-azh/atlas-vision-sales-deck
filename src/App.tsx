@@ -1,20 +1,31 @@
 import { useState, useEffect } from 'react'
 import { useSwipeable } from 'react-swipeable'
 import { motion, AnimatePresence } from 'framer-motion'
+import SlideCover from './slides/SlideCover'
+import SlideAboutUs from './slides/SlideAboutUs'
+import SlideCompanion from './slides/SlideCompanion'
+import Slide02_Evaluation from './slides/Slide02_Evaluation'
+import Slide03_Execution from './slides/Slide03_Execution'
+import SlideTransitionAgentic from './slides/SlideTransitionAgentic'
 import Slide1_Hero from './slides/Slide1_Hero'
 import Slide2_Problem from './slides/Slide2_Problem'
-// import Slide3_Market from './slides/Slide3_Market'
 import Slide4_Solution from './slides/Slide4_Solution'
 import Slide5_Product from './slides/Slide5_Product'
 import Slide6_ValueProp from './slides/Slide6_ValueProp'
 import Slide7_Roadmap from './slides/Slide7_Roadmap'
-// import Slide8_GTM from './slides/Slide8_GTM'
 import Slide9_Revenue from './slides/Slide9_Revenue'
-// import Slide10_Ask from './slides/Slide10_Ask'
 import Slide11_Team from './slides/Slide11_Team'
 import Navigation from './components/Navigation'
+import Slide01_Discovery from './slides/Slide01_Discovery'
 
 const slides = [
+  SlideCover,
+  SlideAboutUs,
+  SlideCompanion,
+  Slide01_Discovery,
+  Slide02_Evaluation,
+  Slide03_Execution,
+  SlideTransitionAgentic,
   Slide1_Hero,
   Slide2_Problem,
   // Slide3_Market,

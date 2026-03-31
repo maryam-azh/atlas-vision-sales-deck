@@ -15,16 +15,16 @@ test.describe('Atlas Vision Pitch Deck', () => {
     // Check for main heading
     const heading = page.locator('h1');
     await expect(heading).toBeVisible();
-    await expect(heading).toContainText('ATLAS VISION');
+    await expect(heading).toContainText('INNOVATE');
   });
 
   test('should display hero slide with impact statement', async ({ page }) => {
     await page.goto('/');
 
-    // Check for hero content
-    await expect(page.locator('text=ATLAS VISION')).toBeVisible();
-    await expect(page.locator('text=AI-Powered Robotics for Automotive Pre-Delivery Inspection')).toBeVisible();
-    await expect(page.locator('text=Intelligent agents that identify, categorize, and process defects across the automotive supply chain.')).toBeVisible();
+    // Check for cover slide content
+    await expect(page.locator('text=INNOVATE')).toBeVisible();
+    await expect(page.locator('text=WITH CONFIDENCE')).toBeVisible();
+    await expect(page.locator('text=Prepared for Tomoro')).toBeVisible();
   });
 
   test('should have navigation controls', async ({ page }) => {

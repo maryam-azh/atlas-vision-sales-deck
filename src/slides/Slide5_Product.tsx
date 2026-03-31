@@ -120,7 +120,7 @@ export default function Slide5_Product() {
         <div className="flex-shrink-0">
           <h2 className="architecture-title text-4xl sm:text-5xl lg:text-6xl font-black mb-2 sm:mb-3 opacity-0">SOLUTION ARCHITECTURE</h2>
           <p className="architecture-subtitle text-lg sm:text-xl lg:text-2xl font-body mb-4 sm:mb-5 opacity-0">
-            We adapt to your evolving needs for modern vehicle inspection.</p>
+            The solution adapts to your evolving needs for modern vehicle inspection.</p>
         </div>
 
         {/* Mobile & Tablet: Simple Stacked/Grid Layout */}

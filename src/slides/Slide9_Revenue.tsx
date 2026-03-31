@@ -43,7 +43,7 @@ export default function Slide9_Pricing() {
 
         {/* ── Title ── */}
         <h2 className="pricing-title text-4xl sm:text-5xl lg:text-6xl font-black mb-2 sm:mb-3 opacity-0">
-          PRICING & PARTNERSHIP
+          PARTNERSHIP MODEL
         </h2>
 
         {/* ── Subtitle ── */}

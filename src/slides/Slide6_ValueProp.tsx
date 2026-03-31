@@ -78,7 +78,7 @@ export default function Slide6_ValueProp() {
                     </div>
                     <div className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-400">→</div>
                     <div className="text-center p-2 sm:p-3 lg:p-4 rounded shadow-sm border border-gray-200" style={{ backgroundColor: 'rgb(var(--pale-peach))' }}>
-                      <div className="text-lg sm:text-xl lg:text-2xl font-black mb-0.5 sm:mb-1 tracking-tight">&lt;1 min</div>
+                      <div className="text-lg sm:text-xl lg:text-2xl font-black mb-0.5 sm:mb-1 tracking-tight">&lt;10 min</div>
                       <div className="font-mono text-[10px] sm:text-xs lg:text-sm uppercase text-gray-600">AI</div>
                     </div>
                   </div>
@@ -185,7 +185,7 @@ export default function Slide6_ValueProp() {
                 CUSTOMER SATISFACTION
               </h3>
               <p className="text-xs sm:text-sm lg:text-base font-body leading-relaxed">
-                Boost trust and loyalty with transparent vehicle history and faster service
+                Boost trust and loyalty with transparent service history 
               </p>
               
               {/* Hover/Touch content */}
