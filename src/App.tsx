@@ -3,41 +3,49 @@ import { useSwipeable } from 'react-swipeable'
 import { motion, AnimatePresence } from 'framer-motion'
 import SlideCover from './slides/SlideCover'
 import SlideAboutUs from './slides/SlideAboutUs'
-import SlideCompanion from './slides/SlideCompanion'
+import SlideCompanion from './slides/Slide00_AtlasServices'
 import Slide02_Evaluation from './slides/Slide02_Evaluation'
 import Slide03_Execution from './slides/Slide03_Execution'
 import SlideTransitionAgentic from './slides/SlideTransitionAgentic'
-import Slide1_Hero from './slides/Slide1_Hero'
-import Slide2_Problem from './slides/Slide2_Problem'
-import Slide4_Solution from './slides/Slide4_Solution'
-import Slide5_Product from './slides/Slide5_Product'
-import Slide6_ValueProp from './slides/Slide6_ValueProp'
-import Slide7_Roadmap from './slides/Slide7_Roadmap'
-import Slide9_Revenue from './slides/Slide9_Revenue'
-import Slide11_Team from './slides/Slide11_Team'
+import SlideEngagementModel from './slides/SlideEngagementModel'
+import SlideNextSteps from './slides/SlideNextSteps'
+import SlideThankYou from './slides/SlideThankYou'
+// import Slide1_Hero from './slides/Slide1_Hero'
+// import Slide2_Problem from './slides/Slide2_Problem'
+// import Slide4_Solution from './slides/Slide4_Solution'
+// import Slide5_Product from './slides/Slide5_Product'
+// import Slide6_ValueProp from './slides/Slide6_ValueProp'
+// import Slide7_Roadmap from './slides/Slide7_Roadmap'
+// import Slide9_Revenue from './slides/Slide9_Revenue'
+// import Slide11_Team from './slides/Slide11_Team'
 import Navigation from './components/Navigation'
 import Slide01_Discovery from './slides/Slide01_Discovery'
+// import Slide0a_AIIndex from './slides/Slide0a_AIIndex'
 
 const slides = [
   SlideCover,
   SlideAboutUs,
   SlideCompanion,
   Slide01_Discovery,
+  // Slide0a_AIIndex,
   Slide02_Evaluation,
   Slide03_Execution,
   SlideTransitionAgentic,
-  Slide1_Hero,
-  Slide2_Problem,
-  // Slide3_Market,
-  Slide4_Solution,
-  Slide5_Product,
+  SlideEngagementModel,
+  SlideNextSteps,
+  SlideThankYou,
+  // Slide1_Hero,
+  // Slide2_Problem,
+  // // Slide3_Market,
+  // Slide4_Solution,
+  // Slide5_Product,
   
-  Slide7_Roadmap,
-  // Slide8_GTM,
-  Slide9_Revenue,
-  Slide6_ValueProp,
-  // Slide10_Ask,
-  Slide11_Team,
+  // Slide7_Roadmap,
+  // // Slide8_GTM,
+  // Slide9_Revenue,
+  // Slide6_ValueProp,
+  // // Slide10_Ask,
+  // Slide11_Team,
 ]
 
 function App() {

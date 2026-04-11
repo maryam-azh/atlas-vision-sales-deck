@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { animate } from 'animejs'
 
 const categories = [
   {
     title: 'AI & GENAI TRAINING',
-    items: ['Executive AI leadership briefings', 'Practitioner workshops', 'Hands-on GenAI lab exercises'],
+    items: ['Executive courses', 'Practitioner workshops', 'Hands-on GenAI lab exercises'],
   },
   {
     title: 'DATA & ARCHITECTURE ADVISORY',
@@ -30,21 +30,12 @@ export default function Slide03_Execution() {
       duration: 800,
       ease: 'outExpo',
     })
-    document.querySelectorAll('.exec-dot').forEach((el, i) => {
+    document.querySelectorAll('.exec-card').forEach((el, i) => {
       animate(el, {
         opacity: { from: 0, to: 1 },
-        scale: { from: 0, to: 1 },
-        duration: 500,
-        delay: 350 + i * 150,
-        ease: 'outExpo',
-      })
-    })
-    document.querySelectorAll('.exec-cat').forEach((el, i) => {
-      animate(el, {
-        opacity: { from: 0, to: 1 },
-        translateX: { from: 15, to: 0 },
+        translateY: { from: 20, to: 0 },
         duration: 600,
-        delay: 400 + i * 150,
+        delay: 350 + i * 120,
         ease: 'outExpo',
       })
     })
@@ -96,32 +87,24 @@ export default function Slide03_Execution() {
           </div>
         </div>
 
-        {/* Right: timeline + categories — fixed height, evenly spaced */}
-        <div className="flex-1 flex flex-row" style={{ height: '90%' }}>
-
-          {/* Timeline column */}
-          <div className="w-10 shrink-0 flex flex-col items-center">
-            {categories.map((_, i) => (
-              <React.Fragment key={i}>
-                <div
-                  className="exec-dot opacity-0 w-4 h-4 rounded-full shrink-0"
-                  style={{ backgroundColor: '#DAB954' }}
-                />
-                {i < categories.length - 1 && (
-                  <div className="flex-1 w-px" style={{ backgroundColor: '#DAB954' }} />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-
-          {/* Categories column */}
-          <div className="flex-1 pl-5 flex flex-col justify-between">
-            {categories.map((cat, i) => (
-              <div key={i} className="exec-cat opacity-0">
-                <h3 className="text-sm lg:text-base font-black text-[#081E4C] underline underline-offset-2 decoration-1 mb-1.5 leading-snug">
+        {/* Right: 2×2 grid, each cell = label box + items tile */}
+        <div className="flex-1 grid grid-cols-2 gap-4" style={{ alignContent: 'center' }}>
+          {categories.map((cat, i) => (
+            <div key={i} className="exec-card opacity-0 flex flex-row items-stretch gap-2">
+              {/* Navy label box */}
+              <div
+                className="shrink-0 w-32 lg:w-36 rounded-xl flex items-center justify-center px-3 py-5 border-2"
+                style={{ borderColor: '#081E4C' }}
+              >
+                <span className="font-semibold text-sm lg:text-base leading-snug text-center" style={{ color: '#081E4C' }}>
                   {cat.title}
-                </h3>
-                <ul className="flex flex-col gap-0.5">
+                </span>
+              </div>
+              {/* Items tile */}
+              <div
+                className="flex-1 rounded-xl flex items-center px-4 py-5"
+              >
+                <ul className="flex flex-col gap-1.5">
                   {cat.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm lg:text-base font-body text-gray-700">
                       <span className="shrink-0 mt-0.5">•</span>
@@ -130,9 +113,8 @@ export default function Slide03_Execution() {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-
+            </div>
+          ))}
         </div>
 
       </div>

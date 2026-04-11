@@ -139,60 +139,57 @@ export default function Slide0a_AIIndex() {
           <p className="text-sm sm:text-base font-body text-gray-500 mt-1">Nine dimensions that determine an organisation's capacity to conceive, deploy, and sustain AI at scale.</p>
         </div>
 
-        {/* Table */}
-        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-md">
-          <table className="w-full border-collapse" style={{ minWidth: '900px' }}>
+        {/* Columns */}
+        <div className="overflow-x-auto">
+          <div className="flex gap-2" style={{ minWidth: '900px' }}>
+            {indexes.map((idx, i) => {
+              const colColors = [
+                'rgb(var(--pale-peach))',
+                'rgb(var(--soft-mint-green))',
+                'rgb(var(--chalky-light-blue))',
+              ]
+              const bg = colColors[i % 3]
+              return (
+                <div key={i} className="aidx-col opacity-0 flex-1 rounded-2xl overflow-hidden flex flex-col shadow-sm" style={{ backgroundColor: bg }}>
 
-            {/* Icon row */}
-            <thead>
-              <tr>
-                {indexes.map((idx, i) => (
-                  <td key={i} className="aidx-col opacity-0 border-b border-gray-200 pt-3 pb-2 px-2 text-center" style={{ width: `${100 / indexes.length}%` }}>
-                    <div className="flex items-center justify-center mx-auto w-9 h-9 rounded-full" style={{ backgroundColor: '#DAB954', color: '#081E4C' }}>
+                  {/* Icon */}
+                  <div className="flex justify-center pt-3 pb-1 px-2">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full" style={{ backgroundColor: 'rgba(8,30,76,0.12)', color: '#081E4C' }}>
                       {idx.icon}
                     </div>
-                  </td>
-                ))}
-              </tr>
+                  </div>
 
-              {/* Letter + Name header row */}
-              <tr>
-                {indexes.map((idx, i) => (
-                  <th key={i} className="aidx-col opacity-0 border-b border-gray-300 px-2 py-2 text-center align-middle" style={{ backgroundColor: '#081E4C' }}>
-                    <div className="text-2xl sm:text-3xl font-black leading-none" style={{ color: '#DAB954' }}>{idx.letter}</div>
-                    <div className="text-[10px] sm:text-[11px] font-black text-white leading-tight mt-0.5 break-words">{idx.name}</div>
-                  </th>
-                ))}
-              </tr>
-            </thead>
+                  {/* Letter + Name */}
+                  <div className="flex flex-col items-center px-2 pb-2 gap-0.5">
+                    <div className="text-2xl sm:text-3xl font-black leading-none" style={{ color: '#081E4C' }}>{idx.letter}</div>
+                    <div className="text-[9px] sm:text-[10px] font-black text-center leading-tight break-words" style={{ color: '#081E4C' }}>{idx.name}</div>
+                  </div>
 
-            <tbody>
-              {/* Definition row */}
-              <tr>
-                {indexes.map((idx, i) => (
-                  <td key={i} className="aidx-col opacity-0 border-b border-gray-100 px-2 py-2 align-top text-[10px] sm:text-[11px] font-body text-gray-500 italic leading-snug bg-white">
+                  {/* Divider */}
+                  <div className="mx-3 h-px" style={{ backgroundColor: 'rgba(8,30,76,0.15)' }} />
+
+                  {/* Definition */}
+                  <div className="px-2.5 py-2 text-[9px] sm:text-[10px] font-body italic leading-snug" style={{ color: 'rgba(8,30,76,0.6)' }}>
                     {idx.definition}
-                  </td>
-                ))}
-              </tr>
+                  </div>
 
-              {/* Metrics row */}
-              <tr>
-                {indexes.map((idx, i) => (
-                  <td key={i} className="aidx-col opacity-0 px-2 py-2 align-top bg-white">
-                    <ul className="flex flex-col gap-1">
-                      {idx.metrics.map((m, j) => (
-                        <li key={j} className="flex items-start gap-1 text-[10px] sm:text-[11px] font-body text-gray-700 leading-snug">
-                          <span className="flex-shrink-0 mt-[3px] text-gray-400">·</span>
-                          <span>{m}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </td>
-                ))}
-              </tr>
-            </tbody>
-          </table>
+                  {/* Divider */}
+                  <div className="mx-3 h-px" style={{ backgroundColor: 'rgba(8,30,76,0.15)' }} />
+
+                  {/* Metrics */}
+                  <div className="px-2.5 py-2 flex flex-col gap-1 flex-1">
+                    {idx.metrics.map((m, j) => (
+                      <div key={j} className="flex items-start gap-1 text-[9px] sm:text-[10px] font-body leading-snug" style={{ color: '#081E4C' }}>
+                        <span className="flex-shrink-0 mt-[2px] opacity-40">·</span>
+                        <span>{m}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+              )
+            })}
+          </div>
         </div>
 
       </div>

@@ -231,17 +231,17 @@ export default function Slide6_ValueProp() {
   const chips = [
     {
       key: 5,
-      title: "Autonomy built upon human intelligence",
+      title: "Human-AI Interaction",
       blurb: "Embedded human oversight and active feedback for continuously improving AI.",
     },
     {
       key: 6,
-      title: "Responsible Scalability with Mobile Autonomy",
+      title: "Responsible AI",
       blurb: "Cost-optimized architecture and embedded governance running on the edge or cloud.",
     },
     {
       key: 7,
-      title: "Paradigm Shift into AI-Powered Workflows",
+      title: "Guided Adoption",
       blurb: "Guided transformation to drive adoption by our team of automotive experts.",
     }
   ];

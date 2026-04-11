@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { animate } from 'animejs'
 
 const categories = [
   {
-    title: 'STRATEGIC ALIGNMENT',
+    title: 'Strategic Alignment',
     items: ['Ambition', 'Portfolio Alignment', 'Accountability'],
   },
   {
-    title: 'CORE CAPABILITY –the How',
+    title: 'Core Capability',
     items: ['Skills', 'R&D', 'Infrastructure'],
   },
   {
-    title: 'PRINCIPLED GOVERNANCE – the Rules',
+    title: 'Principled Governance',
     items: ['Policy & Regulation', 'Budget', 'Ecosystem'],
   },
 ]
@@ -31,21 +31,12 @@ export default function Slide01_Discovery() {
       duration: 800,
       ease: 'outExpo',
     })
-    document.querySelectorAll('.disc-dot').forEach((el, i) => {
+    document.querySelectorAll('.disc-card').forEach((el, i) => {
       animate(el, {
         opacity: { from: 0, to: 1 },
-        scale: { from: 0, to: 1 },
-        duration: 500,
-        delay: 350 + i * 180,
-        ease: 'outExpo',
-      })
-    })
-    document.querySelectorAll('.disc-cat').forEach((el, i) => {
-      animate(el, {
-        opacity: { from: 0, to: 1 },
-        translateX: { from: 15, to: 0 },
+        translateY: { from: 20, to: 0 },
         duration: 600,
-        delay: 400 + i * 180,
+        delay: 350 + i * 120,
         ease: 'outExpo',
       })
     })
@@ -61,10 +52,10 @@ export default function Slide01_Discovery() {
     <div className="h-full w-full bg-white flex flex-col overflow-hidden">
 
       {/* Main row — vertically centred */}
-      <div className="flex-1 min-h-0 flex flex-row items-center justify-center px-16 lg:px-24 pt-6 pb-3 gap-0">
+      <div className="flex-1 min-h-0 flex flex-row items-center justify-center px-16 lg:px-24 pt-6 pb-3 gap-8">
 
         {/* Left column */}
-        <div className="disc-left opacity-0 w-[34%] shrink-0 flex flex-col pr-10">
+        <div className="disc-left opacity-0 w-[42%] shrink-0 flex flex-col">
           <div
             className="w-44 h-44 rounded-full flex items-center justify-center shrink-0 mb-5"
             style={{ backgroundColor: '#DAB954' }}
@@ -73,13 +64,13 @@ export default function Slide01_Discovery() {
           </div>
 
           <h2 className="text-2xl lg:text-3xl font-black text-[#081E4C] mb-1 leading-tight">
-            Maturity Assessment
+            MATURITY ASSESSMENT
           </h2>
           <p className="text-base font-body text-[#081E4C] italic mb-4">
-            What is wrong?
+            What is missing?
           </p>
           <p className="text-sm lg:text-base font-body text-gray-700 leading-relaxed">
-            Assess the maturity of your organization for adopting AI with a Strategy Roadmap.
+            Assess the maturity of your organization for adopting AI across 3 dimensions and scope your investments with a Strategy Roadmap.
           </p>
 
           {/* Pills */}
@@ -96,31 +87,24 @@ export default function Slide01_Discovery() {
           </div>
         </div>
 
-        {/* Right: timeline + categories — fixed height, evenly spaced */}
-        <div className="flex-1 flex flex-row" style={{ height: '75%' }}>
-
-          {/* Timeline column */}
-          <div className="w-10 shrink-0 flex flex-col items-center">
-            {categories.map((_, i) => (
-              <React.Fragment key={i}>
-                <div
-                  className="disc-dot opacity-0 w-4 h-4 rounded-full shrink-0"
-                  style={{ backgroundColor: '#DAB954' }}
-                />
-                {i < categories.length - 1 && (
-                  <div className="flex-1 w-px" style={{ backgroundColor: '#DAB954' }} />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-
-          {/* Categories column */}
-          <div className="flex-1 pl-5 flex flex-col justify-between">
-            {categories.map((cat, i) => (
-              <div key={i} className="disc-cat opacity-0">
-                <h3 className="text-sm lg:text-base font-black text-[#081E4C] underline underline-offset-2 decoration-1 mb-2 leading-snug">
+        {/* Right: stacked rows — label pill overlapping bordered items box */}
+        <div className="flex-1 flex flex-col justify-center gap-4">
+          {categories.map((cat, i) => (
+            <div key={i} className="disc-card opacity-0 flex flex-row items-stretch">
+              {/* Gold label box */}
+              <div
+                className="shrink-0 w-36 lg:w-40 rounded-xl flex items-center justify-center px-3 py-4 z-10"
+                style={{ backgroundColor: 'rgb(201 168 76 / 0.35)' }}
+              >
+                <span className="font-semibold text-sm lg:text-base leading-snug text-center" style={{ color: '#081E4C' }}>
                   {cat.title}
-                </h3>
+                </span>
+              </div>
+              {/* Items box — overlaps the label on its left edge */}
+              <div
+                className="flex-1 rounded-xl border-2 flex items-center px-5 py-4 -ml-3"
+                style={{ backgroundColor: 'white', borderColor: '#DAB954' }}
+              >
                 <ul className="flex flex-col gap-1">
                   {cat.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-2 text-sm lg:text-base font-body text-gray-700">
@@ -130,8 +114,8 @@ export default function Slide01_Discovery() {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
       </div>
